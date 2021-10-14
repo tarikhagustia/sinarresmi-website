@@ -114,3 +114,18 @@ ul {
   background: black;
   padding: 10px;
 }
+
+.slider-text .icon-video {
+  margin: 0 0 0 auto;
+}
+.icon-video {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
