@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/products/original-check/{code}', [\App\Http\Controllers\ProductController::class, 'originalCheck']);
