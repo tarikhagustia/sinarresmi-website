@@ -17,4 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/about-us', function () {
+    return view('about');
+});
+
+Route::get('/events', function () {
+    return view('events');
+});
+
+
 Route::get('/products/original-check/{code}', [\App\Http\Controllers\ProductController::class, 'originalCheck']);
