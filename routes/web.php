@@ -26,5 +26,9 @@ Route::get('/events', function () {
     return view('events');
 });
 
+Route::get('/contact-us', function () {
+    return view('contact-us');
+});
+
 
 Route::get('/products/original-check/{code}', [\App\Http\Controllers\ProductController::class, 'originalCheck']);
