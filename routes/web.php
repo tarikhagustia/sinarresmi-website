@@ -17,22 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('dashboard');
+// })->name('dashboard');
 
-Route::get('/about-us', function () {
-    return view('about');
+
+Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
+    Route::view('dashboard', 'dashboard')->name('dashboard');
+    Route::view('forms', 'forms')->name('forms');
+    Route::view('cards', 'cards')->name('cards');
+    Route::view('charts', 'charts')->name('charts');
+    Route::view('buttons', 'buttons')->name('buttons');
+    Route::view('modals', 'modals')->name('modals');
+    Route::view('tables', 'tables')->name('tables');
+    Route::view('calendar', 'calendar')->name('calendar');
 });
-
-Route::get('/events', function () {
-    return view('events');
-});
-
-Route::get('/contact-us', function () {
-    return view('contact-us');
-});
-
-Route::get('/products', function () {
-    return view('products');
-});
-
-
-Route::get('/products/original-check/{code}', [\App\Http\Controllers\ProductController::class, 'originalCheck']);
