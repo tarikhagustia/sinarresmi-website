@@ -17,6 +17,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about-us', function () {
+    return view('about');
+});
+
+Route::get('/events', function () {
+    return view('events');
+});
+
+Route::get('/products', function () {
+    return view('products');
+});
+
+Route::get('/contact-us', function () {
+    return view('contact-us');
+});
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
 // })->name('dashboard');

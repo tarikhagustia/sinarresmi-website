@@ -3879,15 +3879,14 @@ module.exports = {
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.21';
+  var VERSION = '4.17.20';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
 
   /** Error message constants. */
   var CORE_ERROR_TEXT = 'Unsupported core-js use. Try https://npms.io/search?q=ponyfill.',
-      FUNC_ERROR_TEXT = 'Expected a function',
-      INVALID_TEMPL_VAR_ERROR_TEXT = 'Invalid `variable` option passed into `_.template`';
+      FUNC_ERROR_TEXT = 'Expected a function';
 
   /** Used to stand-in for `undefined` hash values. */
   var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -4020,11 +4019,10 @@ module.exports = {
   var reRegExpChar = /[\\^$.*+?()[\]{}|]/g,
       reHasRegExpChar = RegExp(reRegExpChar.source);
 
-  /** Used to match leading whitespace. */
-  var reTrimStart = /^\s+/;
-
-  /** Used to match a single whitespace character. */
-  var reWhitespace = /\s/;
+  /** Used to match leading and trailing whitespace. */
+  var reTrim = /^\s+|\s+$/g,
+      reTrimStart = /^\s+/,
+      reTrimEnd = /\s+$/;
 
   /** Used to match wrap detail comments. */
   var reWrapComment = /\{(?:\n\/\* \[wrapped with .+\] \*\/)?\n?/,
@@ -4033,18 +4031,6 @@ module.exports = {
 
   /** Used to match words composed of alphanumeric characters. */
   var reAsciiWord = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;
-
-  /**
-   * Used to validate the `validate` option in `_.template` variable.
-   *
-   * Forbids characters which could potentially change the meaning of the function argument definition:
-   * - "()," (modification of function parameters)
-   * - "=" (default value)
-   * - "[]{}" (destructuring of function parameters)
-   * - "/" (beginning of a comment)
-   * - whitespace
-   */
-  var reForbiddenIdentifierChars = /[()=,{}\[\]\/\s]/;
 
   /** Used to match backslashes in property paths. */
   var reEscapeChar = /\\(\\)?/g;
@@ -4875,19 +4861,6 @@ module.exports = {
   }
 
   /**
-   * The base implementation of `_.trim`.
-   *
-   * @private
-   * @param {string} string The string to trim.
-   * @returns {string} Returns the trimmed string.
-   */
-  function baseTrim(string) {
-    return string
-      ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '')
-      : string;
-  }
-
-  /**
    * The base implementation of `_.unary` without support for storing metadata.
    *
    * @private
@@ -5218,21 +5191,6 @@ module.exports = {
     return hasUnicode(string)
       ? unicodeToArray(string)
       : asciiToArray(string);
-  }
-
-  /**
-   * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
-   * character of `string`.
-   *
-   * @private
-   * @param {string} string The string to inspect.
-   * @returns {number} Returns the index of the last non-whitespace character.
-   */
-  function trimmedEndIndex(string) {
-    var index = string.length;
-
-    while (index-- && reWhitespace.test(string.charAt(index))) {}
-    return index;
   }
 
   /**
@@ -16403,7 +16361,7 @@ module.exports = {
       if (typeof value != 'string') {
         return value === 0 ? value : +value;
       }
-      value = baseTrim(value);
+      value = value.replace(reTrim, '');
       var isBinary = reIsBinary.test(value);
       return (isBinary || reIsOctal.test(value))
         ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
@@ -18775,12 +18733,6 @@ module.exports = {
       if (!variable) {
         source = 'with (obj) {\n' + source + '\n}\n';
       }
-      // Throw an error if a forbidden character was found in `variable`, to prevent
-      // potential command injection attacks.
-      else if (reForbiddenIdentifierChars.test(variable)) {
-        throw new Error(INVALID_TEMPL_VAR_ERROR_TEXT);
-      }
-
       // Cleanup code by stripping empty strings.
       source = (isEvaluating ? source.replace(reEmptyStringLeading, '') : source)
         .replace(reEmptyStringMiddle, '$1')
@@ -18894,7 +18846,7 @@ module.exports = {
     function trim(string, chars, guard) {
       string = toString(string);
       if (string && (guard || chars === undefined)) {
-        return baseTrim(string);
+        return string.replace(reTrim, '');
       }
       if (!string || !(chars = baseToString(chars))) {
         return string;
@@ -18929,7 +18881,7 @@ module.exports = {
     function trimEnd(string, chars, guard) {
       string = toString(string);
       if (string && (guard || chars === undefined)) {
-        return string.slice(0, trimmedEndIndex(string) + 1);
+        return string.replace(reTrimEnd, '');
       }
       if (!string || !(chars = baseToString(chars))) {
         return string;
@@ -21330,21 +21282,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/css/admin.css":
-/*!*********************************!*\
-  !*** ./resources/css/admin.css ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/css/app.scss":
-/*!********************************!*\
-  !*** ./resources/css/app.scss ***!
-  \********************************/
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -21402,15 +21343,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/css/app.scss ./resources/css/admin.css ***!
-  \**************************************************************************************/
+/*!***********************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/css/app.css ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/tarikh/Tmp/larawind/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/tarikh/Tmp/larawind/resources/css/app.scss */"./resources/css/app.scss");
-module.exports = __webpack_require__(/*! /Users/tarikh/Tmp/larawind/resources/css/admin.css */"./resources/css/admin.css");
+__webpack_require__(/*! C:\laragon\www\larawind\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\larawind\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })
