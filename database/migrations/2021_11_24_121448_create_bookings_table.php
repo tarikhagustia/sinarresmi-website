@@ -19,7 +19,7 @@ class CreateBookingsTable extends Migration
             $table->date('date_in');
             $table->date('date_out');
             $table->integer('visitor');
-            $table->string('status')->index();
+            $table->string('status')->index()->default('Active');
             $table->timestamps();
         });
     }
