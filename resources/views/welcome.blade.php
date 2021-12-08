@@ -44,13 +44,15 @@
 </div>
 <div class="container">
     <div class="booking-box">
-        <div class="row no-gutters">
+        <form class="row no-gutters" action="{{ route('bookings.store') }}" method="POST">
+            @csrf
+
             <div class="col-md d-flex">
                 <div class="form-group p-4 border-1">
                     <label for="#" class="font-weight-bold text-success">Visitor Name</label>
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="icon mr-3"><span class="far fa-user"></span></div>
-                        <input type="text" class="form-control form-control-sm form-booking" placeholder="Your team or Individual name">
+                        <input name="name" type="text" class="form-control form-control-sm form-booking" placeholder="Your team or Individual name">
                     </div>
                 </div>
             </div>
@@ -59,7 +61,7 @@
                     <label for="#" class="font-weight-bold text-success">Date In</label>
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="icon mr-3"><span class="far fa-calendar"></span></div>
-                        <input type="text" class="form-control form-control-sm form-booking" placeholder="Visit Date">
+                        <input name="date_in" type="date" class="form-control form-control-sm form-booking" placeholder="Visit Date">
                     </div>
                 </div>
             </div>
@@ -68,7 +70,7 @@
                     <label for="#" class="font-weight-bold text-success">Date Out</label>
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="icon mr-3"><span class="far fa-calendar"></span></div>
-                        <input type="text" class="form-control form-control-sm form-booking" placeholder="Visit Date">
+                        <input name="date_out" type="date" class="form-control form-control-sm form-booking" placeholder="Visit Date">
                     </div>
                 </div>
             </div>
@@ -77,7 +79,7 @@
                     <label for="#" class="font-weight-bold text-success">Visitors</label>
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="icon mr-3"><span class="far fa-user"></span></div>
-                        <input type="text" class="form-control form-control-sm form-booking" placeholder="Visitors">
+                        <input name="visitors" type="number" class="form-control form-control-sm form-booking" placeholder="Visitors" min="1">
                     </div>
                 </div>
             </div>
@@ -88,7 +90,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 
     <div class="row">
