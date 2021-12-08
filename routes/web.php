@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BookingResourceController;
+use App\Http\Controllers\Admin\EventResourceController;
 use App\Http\Controllers\Admin\UserResourceController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ProductController;
+use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,7 +32,9 @@ Route::get('/about-us', function () {
 });
 
 Route::get('/events', function () {
-    return view('events');
+    return view('events', [
+        'events' => Event::paginate(12)
+    ]);
 });
 
 Route::get('/contact-us', function () {
@@ -43,6 +47,9 @@ Route::get('/products', function () {
 
 Route::get('/products/original-check/{code}', [ProductController::class, 'originalCheck']);
 
+Route::get('/bookings', function() {
+    return redirect()->route('home');
+});
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
 
 Route::middleware(['guest'])->group(function () {
@@ -64,5 +71,7 @@ Route::middleware(['auth'])->group(function () {
         Route::put('/bookings/{booking}/approve', [BookingResourceController::class, 'approve'])->name('bookings.approve');
         Route::put('/bookings/{booking}/reject', [BookingResourceController::class, 'reject'])->name('bookings.reject');
         Route::resource('/bookings', BookingResourceController::class)->names('bookings');
+
+        Route::resource('/events', EventResourceController::class)->names('events');
     });
 });
