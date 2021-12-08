@@ -18,7 +18,7 @@ class BookingController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'date_in' => 'required|date',
-            'date_out' => 'required|date',
+            'date_out' => 'required|date|after_or_equal:date_in',
             'visitors' => 'required',
         ]);
 
