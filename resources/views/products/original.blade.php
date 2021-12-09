@@ -3,7 +3,7 @@
 @section('content')
     <div class="divider"></div>
     <div class="container">
-       @if($code == "ORI")
+        @if ($code == 'ORI')
             <h3 class="text-center">Produk yang anda punya adalah Asli!</h3>
             <div class="text-center">
                 <img src="{{ asset('images/sayur.jpeg') }}" class="img-fluid mt-3" width="250">
@@ -30,9 +30,11 @@
                     </div>
                 </div>
             </div>
-       @else
+        @else
             <h3 class="text-center">Kode Produk tidak terdaftar pada sistem kami</h3>
-           <p class="text-muted">Kami mendeteksi bawah kode produk yang ada masukkan tidak valid / palsu. kami himbau untuk mendapatkan produk - produk sinar resmi original dapat didapatkan di gerai - gerai yang terdaftar atau offial online shop kami</p>
-    @endif
+            <p class="text-muted">Kami mendeteksi bawah kode produk yang ada masukkan tidak valid / palsu. kami himbau
+                untuk mendapatkan produk - produk sinar resmi original dapat didapatkan di gerai - gerai yang terdaftar atau
+                offial online shop kami</p>
+        @endif
     </div>
-@stop
+@endsection

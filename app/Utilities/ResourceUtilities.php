@@ -4,14 +4,14 @@ namespace App\Utilities;
 
 use Illuminate\Support\Facades\Storage;
 
-class EventResourceUtilities
+class ResourceUtilities
 {
     private static $defaultImage = 'images/event1.jpg';
 
     /**
-     * Store the event image
+     * Store the image
      *
-     * @param $image
+     * @param \Illuminate\Http\UploadedFile $image
      * @return string
      */
     public static function storeImage($image): string
@@ -24,15 +24,14 @@ class EventResourceUtilities
     }
 
     /**
-     * Update the event image
+     * Update the image
      *
-     * @param $image
+     * @param string $oldImage
+     * @param \Illuminate\Http\UploadedFile $image
      * @return string
      */
-    public static function updateImage($image): string
+    public static function updateImage($oldImage, $image): string
     {
-        $oldImage = request()->event->image;
-
         if (!$image) {
             return $oldImage;
         }
@@ -43,9 +42,9 @@ class EventResourceUtilities
     }
 
     /**
-     * Delete the event image
+     * Delete the image
      *
-     * @param $image
+     * @param \Illuminate\Http\UploadedFile $image
      * @return null
      */
     public static function deleteImage($image)

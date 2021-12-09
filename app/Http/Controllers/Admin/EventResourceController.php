@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Event;
-use App\Utilities\EventResourceUtilities;
+use App\Utilities\ResourceUtilities;
 use Illuminate\Http\Request;
 
 class EventResourceController extends Controller
@@ -48,7 +48,7 @@ class EventResourceController extends Controller
         ]);
 
         Event::create(array_merge($validated, [
-            'image' => EventResourceUtilities::storeImage($request->image),
+            'image' => ResourceUtilities::storeImage($request->image),
         ]));
 
         return redirect()->route('admin.events.index')->with('success', 'Event created successfully');
@@ -98,7 +98,7 @@ class EventResourceController extends Controller
         ]);
 
         $event->update(array_merge($validated, [
-            'image' => EventResourceUtilities::updateImage($request->image),
+            'image' => ResourceUtilities::updateImage($event->image, $request->image),
         ]));
 
         return redirect()->route('admin.events.index')->with('success', 'Event updated successfully');
@@ -112,8 +112,8 @@ class EventResourceController extends Controller
      */
     public function destroy(Event $event)
     {
-        EventResourceUtilities::deleteImage($event->image);
-        
+        ResourceUtilities::deleteImage($event->image);
+
         $event->delete();
 
         return redirect()->route('admin.events.index')->with('success', 'Event deleted successfully');
