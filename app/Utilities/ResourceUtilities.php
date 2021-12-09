@@ -11,7 +11,7 @@ class ResourceUtilities
     /**
      * Store the image
      *
-     * @param $image
+     * @param \Illuminate\Http\UploadedFile $image
      * @return string
      */
     public static function storeImage($image): string
@@ -26,13 +26,12 @@ class ResourceUtilities
     /**
      * Update the image
      *
-     * @param $image
+     * @param string $oldImage
+     * @param \Illuminate\Http\UploadedFile $image
      * @return string
      */
-    public static function updateImage($image): string
+    public static function updateImage($oldImage, $image): string
     {
-        $oldImage = request()->event->image;
-
         if (!$image) {
             return $oldImage;
         }
@@ -45,7 +44,7 @@ class ResourceUtilities
     /**
      * Delete the image
      *
-     * @param $image
+     * @param \Illuminate\Http\UploadedFile $image
      * @return null
      */
     public static function deleteImage($image)

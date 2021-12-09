@@ -98,7 +98,7 @@ class EventResourceController extends Controller
         ]);
 
         $event->update(array_merge($validated, [
-            'image' => ResourceUtilities::updateImage($request->image),
+            'image' => ResourceUtilities::updateImage($event->image, $request->image),
         ]));
 
         return redirect()->route('admin.events.index')->with('success', 'Event updated successfully');
