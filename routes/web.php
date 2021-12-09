@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BookingResourceController;
 use App\Http\Controllers\Admin\EventResourceController;
+use App\Http\Controllers\Admin\ProductResourceController;
 use App\Http\Controllers\Admin\UserResourceController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -73,5 +74,7 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('/bookings', BookingResourceController::class)->names('bookings');
 
         Route::resource('/events', EventResourceController::class)->names('events');
+
+        Route::resource('/products', ProductResourceController::class)->names('products');
     });
 });
