@@ -14,7 +14,8 @@
     <div class="divider"></div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
+            {{-- Placeholder Event Card --}}
+            {{-- <div class="col-sm-3">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('images/event1.jpg') }}" alt="Card image cap">
                     <div class="card-body">
@@ -23,41 +24,20 @@
                         <a href="#" class="btn btn-primary">Register</a>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card">
-                    <img class="card-img-top" src="{{ asset('images/event1.jpg') }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Timbul Kerti Turun Besi, Timbul Kidang Turun Kujang</h5>
-                        <p class="card- text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Register</a>
+            </div> --}}
+            @foreach ($events as $event)
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ asset('storage/'.$event->image) }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $event->name }}</h5>
+                            <p class="card- text-muted">{{ $event->description }}</p>
+                            <a href="#" class="btn btn-primary">Register</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card">
-                    <img class="card-img-top" src="{{ asset('images/event1.jpg') }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Timbul Kerti Turun Besi, Timbul Kidang Turun Kujang</h5>
-                        <p class="card- text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Register</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card">
-                    <img class="card-img-top" src="{{ asset('images/event1.jpg') }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Timbul Kerti Turun Besi, Timbul Kidang Turun Kujang</h5>
-                        <p class="card- text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Register</a>
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
+            {{ $events->links() }}
         </div>
     </div>
-@stop
+@endsection
