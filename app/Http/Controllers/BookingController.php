@@ -19,7 +19,7 @@ class BookingController extends Controller
             'name' => 'required|string|max:255',
             'date_in' => 'required|date',
             'date_out' => 'required|date|after_or_equal:date_in',
-            'visitors' => 'required',
+            'visitors' => 'required|numeric|min:1',
         ]);
 
         Booking::create($validatedData, [

@@ -46,7 +46,7 @@ class ProductResourceController extends Controller
             'image' => 'image|file',
             'sku' => 'required|string',
             'price' => 'required|numeric',
-            'stock' => 'required|numeric',
+            'stock' => 'required|numeric|min:0',
         ]);
 
         Product::create(array_merge($validated, [
@@ -98,7 +98,7 @@ class ProductResourceController extends Controller
             'image' => 'image|file',
             'sku' => 'required|string',
             'price' => 'required|numeric',
-            'stock' => 'required|numeric',
+            'stock' => 'required|numeric|min:0',
         ]);
 
         $product->update(array_merge($validated, [
