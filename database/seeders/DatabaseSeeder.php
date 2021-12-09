@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(BookingSeeder::class);
         $this->call(EventSeeder::class);
         $this->call(ProductSeeder::class);
+        $this->call(SerialNumberSeeder::class);
     }
 }
