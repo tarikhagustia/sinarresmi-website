@@ -1,7 +1,5 @@
 @extends('layouts.master')
-@php
-    debug(request()->session()->get('errors'));
-@endphp
+
 @section('content')
     <div class="container min-vh-100">
         <a href="{{ route('admin.events.create') }}" class="btn btn-primary">
