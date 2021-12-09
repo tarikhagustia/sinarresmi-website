@@ -4,12 +4,12 @@ namespace App\Utilities;
 
 use Illuminate\Support\Facades\Storage;
 
-class EventResourceUtilities
+class ResourceUtilities
 {
     private static $defaultImage = 'images/event1.jpg';
 
     /**
-     * Store the event image
+     * Store the image
      *
      * @param $image
      * @return string
@@ -24,7 +24,7 @@ class EventResourceUtilities
     }
 
     /**
-     * Update the event image
+     * Update the image
      *
      * @param $image
      * @return string
@@ -43,7 +43,7 @@ class EventResourceUtilities
     }
 
     /**
-     * Delete the event image
+     * Delete the image
      *
      * @param $image
      * @return null
