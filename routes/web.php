@@ -57,15 +57,16 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
-    Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
+    // UI Template routes
+    // Route::view('forms', 'dashboard.__templates__.forms')->name('forms');
+    // Route::view('cards', 'dashboard.__templates__.cards')->name('cards');
+    // Route::view('charts', 'dashboard.__templates__.charts')->name('charts');
+    // Route::view('buttons', 'dashboard.__templates__.buttons')->name('buttons');
+    // Route::view('modals', 'dashboard.__templates__.modals')->name('modals');
+    // Route::view('tables', 'dashboard.__templates__.tables')->name('tables');
+    // Route::view('calendar', 'dashboard.__templates__.calendar')->name('calendar');
 
-    Route::view('forms', 'dashboard.__templates__.forms')->name('forms');
-    Route::view('cards', 'cards')->name('cards');
-    Route::view('charts', 'charts')->name('charts');
-    Route::view('buttons', 'buttons')->name('buttons');
-    Route::view('modals', 'modals')->name('modals');
-    Route::view('tables', 'dashboard.__templates__.tables')->name('tables');
-    Route::view('calendar', 'calendar')->name('calendar');
+    // Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
     Route::prefix('dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('index');
