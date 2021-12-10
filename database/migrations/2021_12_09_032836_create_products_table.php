@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->string('image');
             $table->string('sku');
             $table->float('price');
-            $table->string('stock');
+            $table->integer('stock');
             $table->timestamps();
         });
     }
