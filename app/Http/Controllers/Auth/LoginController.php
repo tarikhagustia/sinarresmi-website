@@ -32,7 +32,7 @@ class LoginController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->route('dashboard')->with('alert', [
+        return redirect()->route('dashboard.index')->with('alert', [
             'type' => 'success',
             'message' => 'You have successfully logged in.',
         ]);
