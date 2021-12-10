@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container min-vh-100">
-        <a href="{{ route('admin.users.create') }}" class="btn btn-primary">
+        <a href="{{ route('dashboard.users.create') }}" class="btn btn-primary">
             Create New User
         </a>
 
@@ -22,8 +22,8 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>
-                            <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-primary">Edit</a>
-                            <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST"
+                            <a href="{{ route('dashboard.users.edit', $user->id) }}" class="btn btn-primary">Edit</a>
+                            <form action="{{ route('dashboard.users.destroy', $user->id) }}" method="POST"
                                 class="d-inline">
                                 @csrf
                                 @method('DELETE')

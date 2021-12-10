@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="container">
-        <form action="{{ route('admin.users.store') }}" method="POST">
+        <form action="{{ route('dashboard.users.store') }}" method="POST">
             @csrf
-            
+
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name">

@@ -10,25 +10,25 @@
             <p>Visitors: {{ $booking->visitors }}</p>
             <p>Status: {{ $booking->status }}</p>
         </div>
-        
-        <div class="col-12 d-flex justify-content-center align-items-center">
-            <a href="{{ route('admin.bookings.index') }}" class="btn btn-primary d-inline">Back</a>
 
-            <form action="{{ route('admin.bookings.approve', $booking->id) }}" method="POST"
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <a href="{{ route('dashboard.bookings.index') }}" class="btn btn-primary d-inline">Back</a>
+
+            <form action="{{ route('dashboard.bookings.approve', $booking->id) }}" method="POST"
                 class="d-inline">
                 @csrf
                 @method('PUT')
                 <button type="submit" class="btn btn-success" onclick="confirm('Are you sure?')">Approve</button>
             </form>
 
-            <form action="{{ route('admin.bookings.reject', $booking->id) }}" method="POST"
+            <form action="{{ route('dashboard.bookings.reject', $booking->id) }}" method="POST"
                 class="d-inline">
                 @csrf
                 @method('PUT')
                 <button type="submit" class="btn btn-warning" onclick="confirm('Are you sure?')">Reject</button>
             </form>
 
-            <form action="{{ route('admin.bookings.destroy', $booking->id) }}" method="POST"
+            <form action="{{ route('dashboard.bookings.destroy', $booking->id) }}" method="POST"
                 class="d-inline">
                 @csrf
                 @method('DELETE')

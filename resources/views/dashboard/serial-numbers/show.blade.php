@@ -13,11 +13,11 @@
             </div>
 
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <a href="{{ route('admin.serial-numbers.index') }}" class="btn btn-primary d-inline">Back</a>
+                <a href="{{ route('dashboard.serial-numbers.index') }}" class="btn btn-primary d-inline">Back</a>
 
-                <a href="{{ route('admin.serial-numbers.edit', $serialNumber->id) }}" class="btn btn-warning d-inline">Edit</a>
+                <a href="{{ route('dashboard.serial-numbers.edit', $serialNumber->id) }}" class="btn btn-warning d-inline">Edit</a>
 
-                <form action="{{ route('admin.serial-numbers.destroy', $serialNumber->id) }}" method="POST" class="d-inline">
+                <form action="{{ route('dashboard.serial-numbers.destroy', $serialNumber->id) }}" method="POST" class="d-inline">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger" onclick="confirm('Are you sure?')">Delete</button>

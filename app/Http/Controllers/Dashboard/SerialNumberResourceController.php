@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\SerialNumber;
@@ -17,7 +17,7 @@ class SerialNumberResourceController extends Controller
      */
     public function index()
     {
-        return view('admin.serial-numbers.index', [
+        return view('dashboard.serial-numbers.index', [
             'serialNumbers' => SerialNumber::with(['product'])->paginate(10),
         ]);
     }
@@ -29,7 +29,7 @@ class SerialNumberResourceController extends Controller
      */
     public function create()
     {
-        return view('admin.serial-numbers.create');
+        return view('dashboard.serial-numbers.create');
     }
 
     /**
@@ -66,7 +66,7 @@ class SerialNumberResourceController extends Controller
 
         SerialNumber::insert($serialNumbers);
 
-        return redirect()->route('admin.serial-numbers.index')->with('success', 'Serial Number created successfully');
+        return redirect()->route('dashboard.serial-numbers.index')->with('success', 'Serial Number created successfully');
     }
 
     /**
@@ -77,7 +77,7 @@ class SerialNumberResourceController extends Controller
      */
     public function show(SerialNumber $serialNumber)
     {
-        return view('admin.serial-numbers.show', [
+        return view('dashboard.serial-numbers.show', [
             'serialNumber' => $serialNumber,
             'qrCode' => QrCode::size(300)->generate($serialNumber->serial_number),
 
@@ -94,7 +94,7 @@ class SerialNumberResourceController extends Controller
      */
     public function edit(SerialNumber $serialNumber)
     {
-        return view('admin.serial-numbers.edit', [
+        return view('dashboard.serial-numbers.edit', [
             'serialNumber' => $serialNumber,
         ]);
     }
@@ -117,7 +117,7 @@ class SerialNumberResourceController extends Controller
 
         $serialNumber->update($validated);
 
-        return redirect()->route('admin.serial-numbers.index')->with('success', 'Serial Number updated successfully');
+        return redirect()->route('dashboard.serial-numbers.index')->with('success', 'Serial Number updated successfully');
     }
 
     /**
@@ -130,6 +130,6 @@ class SerialNumberResourceController extends Controller
     {
         $serialNumber->delete();
 
-        return redirect()->route('admin.serial-numbers.index')->with('success', 'Serial Number deleted successfully');
+        return redirect()->route('dashboard.serial-numbers.index')->with('success', 'Serial Number deleted successfully');
     }
 }

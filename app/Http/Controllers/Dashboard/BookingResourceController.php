@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
@@ -15,7 +15,7 @@ class BookingResourceController extends Controller
      */
     public function index()
     {
-        return view('admin.bookings.index', [
+        return view('dashboard.bookings.index', [
             'bookings' => Booking::paginate(10),
         ]);
     }
@@ -49,7 +49,7 @@ class BookingResourceController extends Controller
      */
     public function show(Booking $booking)
     {
-        return view('admin.bookings.show', [
+        return view('dashboard.bookings.show', [
             'booking' => $booking,
         ]);
     }
@@ -87,7 +87,7 @@ class BookingResourceController extends Controller
     {
         $booking->delete();
 
-        return redirect()->route('admin.bookings.index')->with('success', 'Booking deleted successfully');
+        return redirect()->route('dashboard.bookings.index')->with('success', 'Booking deleted successfully');
     }
 
     /**
@@ -102,7 +102,7 @@ class BookingResourceController extends Controller
             'status' => 'approved',
         ]);
 
-        return redirect()->route('admin.bookings.index')->with('success', 'Booking approved successfully');
+        return redirect()->route('dashboard.bookings.index')->with('success', 'Booking approved successfully');
     }
 
     /**
@@ -117,6 +117,6 @@ class BookingResourceController extends Controller
             'status' => 'rejected',
         ]);
 
-        return redirect()->route('admin.bookings.index')->with('success', 'Booking rejected successfully');
+        return redirect()->route('dashboard.bookings.index')->with('success', 'Booking rejected successfully');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
@@ -16,7 +16,7 @@ class ProductResourceController extends Controller
      */
     public function index()
     {
-        return view('admin.products.index', [
+        return view('dashboard.products.index', [
             'products' => Product::paginate(12),
         ]);
     }
@@ -28,7 +28,7 @@ class ProductResourceController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        return view('dashboard.products.create');
     }
 
     /**
@@ -53,7 +53,7 @@ class ProductResourceController extends Controller
             'image' => ResourceUtilities::storeImage($request->image),
         ]));
 
-        return redirect()->route('admin.products.index')->with('success', 'Product created successfully');
+        return redirect()->route('dashboard.products.index')->with('success', 'Product created successfully');
     }
 
     /**
@@ -64,7 +64,7 @@ class ProductResourceController extends Controller
      */
     public function show(Product $product)
     {
-        return view('admin.products.show', [
+        return view('dashboard.products.show', [
             'product' => $product,
         ]);
     }
@@ -77,7 +77,7 @@ class ProductResourceController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('admin.products.edit', [
+        return view('dashboard.products.edit', [
             'product' => $product,
         ]);
     }
@@ -105,7 +105,7 @@ class ProductResourceController extends Controller
             'image' => ResourceUtilities::updateImage($product->image, $request->image),
         ]));
 
-        return redirect()->route('admin.products.index')->with('success', 'Product updated successfully');
+        return redirect()->route('dashboard.products.index')->with('success', 'Product updated successfully');
     }
 
     /**
@@ -120,6 +120,6 @@ class ProductResourceController extends Controller
 
         $product->delete();
 
-        return redirect()->route('admin.products.index')->with('success', 'Product deleted successfully');
+        return redirect()->route('dashboard.products.index')->with('success', 'Product deleted successfully');
     }
 }

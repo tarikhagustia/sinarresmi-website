@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container min-vh-100">
-        <a href="{{ route('admin.events.create') }}" class="btn btn-primary">
+        <a href="{{ route('dashboard.events.create') }}" class="btn btn-primary">
             Create New Event
         </a>
 
@@ -26,14 +26,14 @@
                         <td>{{ $event->end_date }}</td>
                         <td class="text-truncate" style="max-width: 200px">{{ $event->description }}</td>
                         <td>
-                            <a href="{{ route('admin.events.show', $event->id) }}" class="btn btn-primary d-inline">
+                            <a href="{{ route('dashboard.events.show', $event->id) }}" class="btn btn-primary d-inline">
                                 Show
                             </a>
-                            <a href="{{ route('admin.events.edit', $event->id) }}" class="btn btn-warning d-inline">
+                            <a href="{{ route('dashboard.events.edit', $event->id) }}" class="btn btn-warning d-inline">
                                 Edit
                             </a>
 
-                            <form action="{{ route('admin.events.destroy', $event->id) }}" method="POST"
+                            <form action="{{ route('dashboard.events.destroy', $event->id) }}" method="POST"
                                 class="d-inline">
                                 @csrf
                                 @method('DELETE')

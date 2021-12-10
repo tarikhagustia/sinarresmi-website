@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form action="{{ route('admin.serial-numbers.store') }}" method="POST">
+        <form action="{{ route('dashboard.serial-numbers.store') }}" method="POST">
             @csrf
 
             <div class="form-group">

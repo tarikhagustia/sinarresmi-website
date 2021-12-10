@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container min-vh-100">
-        <a href="{{ route('admin.serial-numbers.create') }}" class="btn btn-primary">
+        <a href="{{ route('dashboard.serial-numbers.create') }}" class="btn btn-primary">
             Create New Serial Number
         </a>
 
@@ -26,15 +26,15 @@
                         <td>{{ $serialNumber->production_date }}</td>
                         <td>{{ $serialNumber->expiration_date }}</td>
                         <td>
-                            <a href="{{ route('admin.serial-numbers.show', $serialNumber->id) }}" class="btn btn-primary d-inline-block">
+                            <a href="{{ route('dashboard.serial-numbers.show', $serialNumber->id) }}" class="btn btn-primary d-inline-block">
                                 Show
                             </a>
 
-                            <a href="{{ route('admin.serial-numbers.edit', $serialNumber->id) }}" class="btn btn-warning d-inline-block">
+                            <a href="{{ route('dashboard.serial-numbers.edit', $serialNumber->id) }}" class="btn btn-warning d-inline-block">
                                 Edit
                             </a>
 
-                            <form action="{{ route('admin.serial-numbers.destroy', $serialNumber->id) }}" method="POST"
+                            <form action="{{ route('dashboard.serial-numbers.destroy', $serialNumber->id) }}" method="POST"
                                 class="d-inline-block">
                                 @csrf
                                 @method('DELETE')

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -15,7 +15,7 @@ class UserResourceController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index', [
+        return view('dashboard.users.index', [
             'users' => User::paginate(10),
         ]);
     }
@@ -27,7 +27,7 @@ class UserResourceController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        return view('dashboard.users.create');
     }
 
     /**
@@ -48,7 +48,7 @@ class UserResourceController extends Controller
 
         User::create($credentials);
 
-        return redirect()->route('admin.users.index');
+        return redirect()->route('dashboard.users.index');
     }
 
     /**
@@ -70,7 +70,7 @@ class UserResourceController extends Controller
      */
     public function edit(User $user)
     {
-        return view('admin.users.edit', [
+        return view('dashboard.users.edit', [
             'user' => $user,
         ]);
     }
@@ -96,7 +96,7 @@ class UserResourceController extends Controller
 
         $user->update($credentials);
 
-        return redirect()->route('admin.users.index');
+        return redirect()->route('dashboard.users.index');
     }
 
     /**
@@ -109,6 +109,6 @@ class UserResourceController extends Controller
     {
         $user->delete();
 
-        return redirect()->route('admin.users.index');
+        return redirect()->route('dashboard.users.index');
     }
 }

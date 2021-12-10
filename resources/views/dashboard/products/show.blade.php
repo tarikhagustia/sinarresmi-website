@@ -14,11 +14,11 @@
             </div>
 
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <a href="{{ route('admin.products.index') }}" class="btn btn-primary d-inline">Back</a>
+                <a href="{{ route('dashboard.products.index') }}" class="btn btn-primary d-inline">Back</a>
 
-                <a href="{{ route('admin.products.edit', $product->id) }}" class="btn btn-warning d-inline">Edit</a>
+                <a href="{{ route('dashboard.products.edit', $product->id) }}" class="btn btn-warning d-inline">Edit</a>
 
-                <form action="{{ route('admin.products.destroy', $product->id) }}" method="POST" class="d-inline">
+                <form action="{{ route('dashboard.products.destroy', $product->id) }}" method="POST" class="d-inline">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger" onclick="confirm('Are you sure?')">Delete</button>

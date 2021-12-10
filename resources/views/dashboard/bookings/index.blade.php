@@ -24,7 +24,7 @@
                         <td>{{ $booking->visitors }}</td>
                         <td>{{ $booking->status }}</td>
                         <td>
-                            <a href="{{ route('admin.bookings.show', $booking->id) }}" class="btn btn-primary d-inline">Show</a>
+                            <a href="{{ route('dashboard.bookings.show', $booking->id) }}" class="btn btn-primary d-inline">Show</a>
                         </td>
                     </tr>
                 @endforeach

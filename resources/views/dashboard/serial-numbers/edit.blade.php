@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form action="{{ route('admin.serial-numbers.update', $serialNumber->id) }}" method="POST">
+        <form action="{{ route('dashboard.serial-numbers.update', $serialNumber->id) }}" method="POST">
             @csrf
             @method('PUT')
 

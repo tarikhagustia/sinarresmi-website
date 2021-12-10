@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Event;
@@ -16,7 +16,7 @@ class EventResourceController extends Controller
      */
     public function index()
     {
-        return view('admin.events.index', [
+        return view('dashboard.events.index', [
             'events' => Event::paginate(10),
         ]);
     }
@@ -28,7 +28,7 @@ class EventResourceController extends Controller
      */
     public function create()
     {
-        return view('admin.events.create');
+        return view('dashboard.events.create');
     }
 
     /**
@@ -51,7 +51,7 @@ class EventResourceController extends Controller
             'image' => ResourceUtilities::storeImage($request->image),
         ]));
 
-        return redirect()->route('admin.events.index')->with('success', 'Event created successfully');
+        return redirect()->route('dashboard.events.index')->with('success', 'Event created successfully');
     }
 
     /**
@@ -62,7 +62,7 @@ class EventResourceController extends Controller
      */
     public function show(Event $event)
     {
-        return view('admin.events.show', [
+        return view('dashboard.events.show', [
             'event' => $event
         ]);
     }
@@ -75,7 +75,7 @@ class EventResourceController extends Controller
      */
     public function edit(Event $event)
     {
-        return view('admin.events.edit', [
+        return view('dashboard.events.edit', [
             'event' => $event
         ]);
     }
@@ -101,7 +101,7 @@ class EventResourceController extends Controller
             'image' => ResourceUtilities::updateImage($event->image, $request->image),
         ]));
 
-        return redirect()->route('admin.events.index')->with('success', 'Event updated successfully');
+        return redirect()->route('dashboard.events.index')->with('success', 'Event updated successfully');
     }
 
     /**
@@ -116,6 +116,6 @@ class EventResourceController extends Controller
 
         $event->delete();
 
-        return redirect()->route('admin.events.index')->with('success', 'Event deleted successfully');
+        return redirect()->route('dashboard.events.index')->with('success', 'Event deleted successfully');
     }
 }

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container min-vh-100">
-        <a href="{{ route('admin.products.create') }}" class="btn btn-primary">
+        <a href="{{ route('dashboard.products.create') }}" class="btn btn-primary">
             Create New Product
         </a>
 
@@ -30,15 +30,15 @@
                         <td>Rp. {{ $product->price }}</td>
                         <td>{{ $product->stock }}</td>
                         <td>
-                            <a href="{{ route('admin.products.show', $product->id) }}" class="btn btn-primary d-inline-block">
+                            <a href="{{ route('dashboard.products.show', $product->id) }}" class="btn btn-primary d-inline-block">
                                 Show
                             </a>
 
-                            <a href="{{ route('admin.products.edit', $product->id) }}" class="btn btn-warning d-inline-block">
+                            <a href="{{ route('dashboard.products.edit', $product->id) }}" class="btn btn-warning d-inline-block">
                                 Edit
                             </a>
 
-                            <form action="{{ route('admin.products.destroy', $product->id) }}" method="POST"
+                            <form action="{{ route('dashboard.products.destroy', $product->id) }}" method="POST"
                                 class="d-inline-block">
                                 @csrf
                                 @method('DELETE')
