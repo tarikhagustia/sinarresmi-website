@@ -43,9 +43,7 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
-Route::get('/products', function () {
-    return view('products');
-});
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
 Route::get('/products/original-check/{code}', [ProductController::class, 'originalCheck']);
 
