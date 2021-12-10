@@ -1,8 +1,10 @@
-@extends('layouts.master')
+<x-app-layout title="Booking">
+    <div class="container grid px-6 mx-auto">
+        <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+           {{ $booking->name }}
+        </h2>
 
-@section('content')
-<div class="container">
-    <div class="row">
+
         <div class="col-12 d-flex flex-column justify-content-center align-items-center">
             <p>Name: {{ $booking->name }}</p>
             <p>Date In: {{ $booking->date_in }}</p>
@@ -36,5 +38,4 @@
             </form>
         </div>
     </div>
-</div>
-@endsection
+</x-app-layout>
