@@ -6,13 +6,23 @@ use App\Models\Booking;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\ResourceTestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class BookingResourceTest extends ResourceTestCase
 {
+    use DatabaseTransactions;
+
     public function setUp(): void
     {
         parent::setUp();
         $this->booking = Booking::factory()->create();
+    }
+
+    public function tearDown(): void
+    {
+        parent::tearDown();
+
+        $this->booking->delete();
     }
 
     public function test_dashboard_bookings_index_view()

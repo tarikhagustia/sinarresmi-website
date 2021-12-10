@@ -5,10 +5,13 @@ namespace Tests\Feature;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\ResourceTestCase;
 
 class UserResourceTest extends ResourceTestCase
 {
+    use DatabaseTransactions;
+
     protected function mockUser()
     {
         $this->testUser = User::factory()->create();
@@ -18,6 +21,13 @@ class UserResourceTest extends ResourceTestCase
     {
         parent::setUp();
         $this->mockUser();
+    }
+
+    public function tearDown(): void
+    {
+        parent::tearDown();
+
+        $this->testUser->delete();
     }
 
     public function test_dashboard_users_index_view()

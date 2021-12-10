@@ -5,16 +5,26 @@ namespace Tests\Feature;
 use App\Models\Event;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\ResourceTestCase;
 
 class EventResourceTest extends ResourceTestCase
 {
+    use DatabaseTransactions;
+
     public function setUp(): void
     {
         parent::setUp();
         $this->events = Event::factory()->create([
             'status' => 'pending'
         ]);
+    }
+
+    public function tearDown(): void
+    {
+        parent::tearDown();
+
+        $this->events->delete();
     }
 
     public function test_dashboard_event_index()
