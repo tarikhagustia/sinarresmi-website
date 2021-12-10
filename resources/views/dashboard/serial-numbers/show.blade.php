@@ -22,7 +22,7 @@
                 <form action="{{ route('dashboard.serial-numbers.destroy', $serialNumber->id) }}" method="POST" class="d-inline">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger" onclick="confirm('Are you sure?')">Delete</button>
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
                 </form>
             </div>
         </div>

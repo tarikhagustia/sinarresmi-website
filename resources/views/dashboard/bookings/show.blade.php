@@ -18,21 +18,21 @@
                 class="d-inline">
                 @csrf
                 @method('PUT')
-                <button type="submit" class="btn btn-success" onclick="confirm('Are you sure?')">Approve</button>
+                <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure?')">Approve</button>
             </form>
 
             <form action="{{ route('dashboard.bookings.reject', $booking->id) }}" method="POST"
                 class="d-inline">
                 @csrf
                 @method('PUT')
-                <button type="submit" class="btn btn-warning" onclick="confirm('Are you sure?')">Reject</button>
+                <button type="submit" class="btn btn-warning" onclick="return confirm('Are you sure?')">Reject</button>
             </form>
 
             <form action="{{ route('dashboard.bookings.destroy', $booking->id) }}" method="POST"
                 class="d-inline">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-danger" onclick="confirm('Are you sure?')">Delete</button>
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
             </form>
         </div>
     </div>
