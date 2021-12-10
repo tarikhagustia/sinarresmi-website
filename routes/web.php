@@ -59,12 +59,12 @@ Route::middleware(['guest'])->group(function () {
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
-    Route::view('forms', 'forms')->name('forms');
+    Route::view('forms', 'dashboard.__templates__.forms')->name('forms');
     Route::view('cards', 'cards')->name('cards');
     Route::view('charts', 'charts')->name('charts');
     Route::view('buttons', 'buttons')->name('buttons');
     Route::view('modals', 'modals')->name('modals');
-    Route::view('tables', 'tables')->name('tables');
+    Route::view('tables', 'dashboard.__templates__.tables')->name('tables');
     Route::view('calendar', 'calendar')->name('calendar');
 
     Route::prefix('dashboard')->name('dashboard.')->group(function () {
