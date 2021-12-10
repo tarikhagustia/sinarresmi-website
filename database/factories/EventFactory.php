@@ -22,11 +22,11 @@ class EventFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
+            'title' => $this->faker->name,
+            'description' => $this->faker->text,
             'date_start' => $this->faker->date,
             'date_end' => $this->faker->date,
-            'description' => $this->faker->text,
-            'image_location' => $this->faker->imageUrl(),
+            'image' => $this->faker->imageUrl(),
             'status' => $this->faker->randomElement(['pending', 'approved', 'rejected']),
         ];
     }

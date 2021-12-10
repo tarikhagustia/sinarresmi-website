@@ -17,8 +17,9 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('sku');
             $table->string('name');
+            $table->string('category');
             $table->string('description');
-            $table->string('image_location');
+            $table->string('image');
             $table->double('price', 11, 0);
             $table->string('status')->index();
             $table->timestamps();

@@ -24,9 +24,9 @@ class ProductFactory extends Factory
         return [
             'sku' => $this->faker->ean8(),
             'name' => $this->faker->name,
-            'description' => $this->faker->text,
             'category' => $this->faker->colorName,
-            'image_location' => $this->faker->imageUrl(),
+            'description' => $this->faker->text,
+            'image' => $this->faker->imageUrl(),
             'price' => $this->faker->randomFloat(2, 0, 100),
             'status' => $this->faker->randomElement(['pending', 'approved', 'rejected']),
         ];

@@ -19,7 +19,7 @@ class CreateEventsTable extends Migration
             $table->text('description');
             $table->date('date_start');
             $table->date('date_end');
-            $table->string('image_location');
+            $table->string('image');
             $table->string('status')->index();
             $table->timestamps();
         });
