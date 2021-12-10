@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\BookingResourceController;
-use App\Http\Controllers\Admin\EventResourceController;
-use App\Http\Controllers\Admin\ProductResourceController;
-use App\Http\Controllers\Admin\SerialNumberResourceController;
-use App\Http\Controllers\Admin\UserResourceController;
+use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\BookingResourceController;
+use App\Http\Controllers\Dashboard\EventResourceController;
+use App\Http\Controllers\Dashboard\ProductResourceController;
+use App\Http\Controllers\Dashboard\SerialNumberResourceController;
+use App\Http\Controllers\Dashboard\UserResourceController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BookingController;
@@ -56,11 +56,20 @@ Route::middleware(['guest'])->group(function () {
     Route::post('/register', [RegisterController::class, 'store']);
 });
 
-Route::middleware(['auth'])->group(function () {
-    Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
+Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
+    // UI Template routes
+    // Route::view('forms', 'dashboard.__templates__.forms')->name('forms');
+    // Route::view('cards', 'dashboard.__templates__.cards')->name('cards');
+    // Route::view('charts', 'dashboard.__templates__.charts')->name('charts');
+    // Route::view('buttons', 'dashboard.__templates__.buttons')->name('buttons');
+    // Route::view('modals', 'dashboard.__templates__.modals')->name('modals');
+    // Route::view('tables', 'dashboard.__templates__.tables')->name('tables');
+    // Route::view('calendar', 'dashboard.__templates__.calendar')->name('calendar');
 
-    Route::prefix('admin')->name('admin.')->group(function () {
-        Route::get('/', [AdminController::class, 'index'])->name('index');
+    // Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
+
+    Route::prefix('dashboard')->name('dashboard.')->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])->name('index');
 
         Route::resource('/users', UserResourceController::class)->names('users');
 
