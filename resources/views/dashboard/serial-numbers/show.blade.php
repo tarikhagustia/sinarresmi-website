@@ -1,8 +1,10 @@
-@extends('layouts.master')
+<x-app-layout title="Serial Numbers">
+    <div class="container grid px-6 mx-auto">
+        <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+            Serial Number: {{ $serialNumber->serial_number }}
+        </h2>
 
-@section('content')
-    <div class="container">
-        <div class="row">
+        <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
             <div class="mt-5 col-12 d-flex flex-column justify-content-center align-items-center">
                 {!! $qrCode !!}
                 <p>ID: {{ $serialNumber->id }}</p>
@@ -25,4 +27,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-app-layout>

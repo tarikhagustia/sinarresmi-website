@@ -1,31 +1,75 @@
-@extends('layouts.master')
+<x-app-layout title="Serial Numbers">
+    <div class="container grid px-6 mx-auto">
+        <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+            Create New Serial Numbers
+        </h2>
 
-@section('content')
-    <div class="container">
-        <form action="{{ route('dashboard.serial-numbers.store') }}" method="POST">
-            @csrf
+        <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+            <form action="{{ route('dashboard.serial-numbers.store') }}" method="POST">
+                @csrf
 
-            <div class="form-group">
-                <label for="product_id">Product ID</label>
-                <input type="text" class="form-control" id="product_id" name="product_id" value="{{ old('product_id') }}">
-            </div>
+                <label class="block mb-4 text-sm">
+                    <span class="text-gray-700 dark:text-gray-400">
+                        Product ID
+                    </span>
+                    <input name="product_id" type="text" value="{{ old('product_id') }}"
+                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+                        placeholder="Product ID" />
+                    <span class="text-xs text-gray-600 dark:text-gray-400">
+                        @error('product_id')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </label>
 
-            <div class="form-group">
-                <label for="production_date">Production Date</label>
-                <input type="date" class="form-control" id="production_date" name="production_date" value="{{ old('production_date') }}">
-            </div>
+                <label class="block mb-4 text-sm">
+                    <span class="text-gray-700 dark:text-gray-400">
+                        Production Date
+                    </span>
+                    <input name="production_date" type="date" value="{{ old('production_date') }}"
+                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+                        placeholder="Production Date" />
+                    <span class="text-xs text-gray-600 dark:text-gray-400">
+                        @error('production_date')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </label>
 
-            <div class="form-group">
-                <label for="expiration_date">Expiration Date</label>
-                <input type="date" class="form-control" id="expiration_date" name="expiration_date" value="{{ old('expiration_date') }}">
-            </div>
+                <label class="block mb-4 text-sm">
+                    <span class="text-gray-700 dark:text-gray-400">
+                        Expiration Date
+                    </span>
+                    <input name="expiration_date" type="date" value="{{ old('expiration_date') }}"
+                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+                        placeholder="Expiration Date" />
+                    <span class="text-xs text-gray-600 dark:text-gray-400">
+                        @error('expiration_date')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </label>
 
-            <div class="form-group">
-                <label for="product_count">Product Count</label>
-                <input type="number" class="form-control" id="product_count" name="product_count" value="{{ old('product_count') }}" min="1">
-            </div>
+                <label class="block mb-4 text-sm">
+                    <span class="text-gray-700 dark:text-gray-400">
+                        Product Count
+                    </span>
+                    <input name="product_count" type="number" value="{{ old('product_count') }}" min="1"
+                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+                        placeholder="Product Count" />
+                    <span class="text-xs text-gray-600 dark:text-gray-400">
+                        @error('product_count')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </label>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+                <button type="submit"
+                    class="inset-y-0 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+                    Submit
+                </button>
+            </form>
+
+        </div>
     </div>
-@endsection
+</x-app-layout>
