@@ -9,8 +9,8 @@ use App\Http\Controllers\Admin\UserResourceController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProductController;
-use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,11 +33,7 @@ Route::get('/about-us', function () {
     return view('about');
 });
 
-Route::get('/events', function () {
-    return view('events', [
-        'events' => Event::paginate(12)
-    ]);
-});
+Route::get('/events', [EventController::class, 'index'])->name('events.index');
 
 Route::get('/contact-us', function () {
     return view('contact-us');
