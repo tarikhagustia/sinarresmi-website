@@ -40,11 +40,11 @@ class EventResourceController extends Controller
     public function store(Request $request)
     {
         $validated = $this->validate($request, [
-            'name' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
             'status' => 'required|string',
             'description' => 'required|string',
-            'start_date' => 'required|date',
-            'end_date' => 'required|date|after_or_equal:start_date',
+            'date_start' => 'required|date',
+            'date_end' => 'required|date|after_or_equal:date_start',
             'image' => 'image|file',
         ]);
 
@@ -91,11 +91,11 @@ class EventResourceController extends Controller
     public function update(Request $request, Event $event)
     {
         $validated = $this->validate($request, [
-            'name' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
             'status' => 'required|string',
             'description' => 'required|string',
-            'start_date' => 'required|date',
-            'end_date' => 'required|date|after_or_equal:start_date',
+            'date_start' => 'required|date',
+            'date_end' => 'required|date|after_or_equal:date_start',
             'image' => 'nullable|image|file',
         ]);
 
