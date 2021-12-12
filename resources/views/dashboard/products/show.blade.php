@@ -5,6 +5,10 @@
         </h2>
 
 
+        @php
+            debug($errors);
+        @endphp
+
         <div class="bg-white col-12 d-flex flex-column justify-content-center align-items-center">
             <img src="{{ asset('storage/' . $product->image) }}" alt="product image">
             <p>Name: {{ $product->name }}</p>
@@ -13,6 +17,7 @@
             <p>SKU: {{ $product->sku }}</p>
             <p>Price: Rp. {{ $product->price }}</p>
             <p>Stock: {{ $product->stock }}</p>
+            <p>Status: {{ $product->status }}</p>
         </div>
 
         <div class="col-12 d-flex justify-content-center align-items-center">

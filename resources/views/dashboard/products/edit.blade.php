@@ -4,6 +4,9 @@
             Edit Product
         </h2>
 
+        @php
+            debug($errors);
+        @endphp
         <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
             <form action="{{ route('dashboard.products.update', $product->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -102,6 +105,20 @@
                         placeholder="Stock" />
                     <span class="text-xs text-gray-600 dark:text-gray-400">
                         @error('stock')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </label>
+
+                <label class="block mb-4 text-sm">
+                    <span class="text-gray-700 dark:text-gray-400">
+                        Status
+                    </span>
+                    <input name="status" type="text" value="{{ $product->status }}"
+                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+                        placeholder="Status" />
+                    <span class="text-xs text-gray-600 dark:text-gray-400">
+                        @error('status')
                             {{ $message }}
                         @enderror
                     </span>

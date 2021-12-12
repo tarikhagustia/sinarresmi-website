@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Product\StoreProductRequest;
+use App\Http\Requests\Product\UpdateProductRequest;
 use App\Models\Product;
 use App\Utilities\ResourceUtilities;
 use Illuminate\Http\Request;
@@ -37,17 +39,9 @@ class ProductResourceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'category' => 'required|string|max:255',
-            'description' => 'required|string',
-            'image' => 'image|file',
-            'sku' => 'required|string',
-            'price' => 'required|numeric',
-            'stock' => 'required|numeric|min:0',
-        ]);
+        $validated = $request->validated();
 
         Product::create(array_merge($validated, [
             'image' => ResourceUtilities::storeImage($request->image),
@@ -89,17 +83,9 @@ class ProductResourceController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(UpdateProductRequest $request, Product $product)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'category' => 'required|string|max:255',
-            'description' => 'required|string',
-            'image' => 'image|file',
-            'sku' => 'required|string',
-            'price' => 'required|numeric',
-            'stock' => 'required|numeric|min:0',
-        ]);
+        $validated = $request->validated();
 
         $product->update(array_merge($validated, [
             'image' => ResourceUtilities::updateImage($product->image, $request->image),

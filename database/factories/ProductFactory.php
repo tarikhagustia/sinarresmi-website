@@ -28,6 +28,7 @@ class ProductFactory extends Factory
             'description' => $this->faker->text,
             'image' => $this->faker->imageUrl(),
             'price' => $this->faker->randomNumber(7, true),
+            'stock' => $this->faker->randomNumber(2),
             'status' => $this->faker->randomElement(['pending', 'approved', 'rejected']),
         ];
     }
