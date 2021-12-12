@@ -6,8 +6,6 @@ use App\Http\Controllers\Dashboard\EventResourceController;
 use App\Http\Controllers\Dashboard\ProductResourceController;
 use App\Http\Controllers\Dashboard\SerialNumberResourceController;
 use App\Http\Controllers\Dashboard\UserResourceController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProductController;
@@ -48,14 +46,6 @@ Route::get('/bookings', function() {
 });
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
 
-Route::middleware(['guest'])->group(function () {
-    Route::get('/login', [LoginController::class, 'index'])->name('login');
-    Route::post('/login', [LoginController::class, 'authenticate']);
-
-    Route::get('/register', [RegisterController::class, 'index'])->name('register');
-    Route::post('/register', [RegisterController::class, 'store']);
-});
-
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     // UI Template routes
     // Route::view('forms', 'dashboard.__templates__.forms')->name('forms');
@@ -65,8 +55,6 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     // Route::view('modals', 'dashboard.__templates__.modals')->name('modals');
     // Route::view('tables', 'dashboard.__templates__.tables')->name('tables');
     // Route::view('calendar', 'dashboard.__templates__.calendar')->name('calendar');
-
-    // Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
     Route::prefix('dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('index');
