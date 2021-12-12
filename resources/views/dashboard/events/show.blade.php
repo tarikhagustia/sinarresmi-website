@@ -8,7 +8,7 @@
         <div class="bg-white col-12 d-flex flex-column justify-content-center align-items-center">
             <img src="{{ asset('storage/' . $event->image) }}" alt="event image">
             <p>Title: {{ $event->title }}</p>
-            <p>Status: {{ $event->statis }}</p>
+            <p>Status: {{ $event->status }}</p>
             <p>Description: {{ $event->description }}</p>
             <p>Start Date: {{ $event->date_start }}</p>
             <p>End Date: {{ $event->date_end }}</p>
