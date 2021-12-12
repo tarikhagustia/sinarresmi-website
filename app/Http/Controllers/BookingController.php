@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\BookingRequest;
+use App\Http\Requests\Booking\StoreBookingRequest;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,7 @@ class BookingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BookingRequest $request)
+    public function store(StoreBookingRequest $request)
     {
         $validatedData = $request->validated();
 
