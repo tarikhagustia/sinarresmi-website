@@ -30,9 +30,10 @@
                     <div class="card">
                         <img class="card-img-top" src="{{ asset('storage/'.$event->image) }}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $event->name }}</h5>
-                            <p class="card- text-muted">{{ $event->description }}</p>
-                            <a href="#" class="btn btn-primary">Register</a>
+                            <h5 class="card-title">{{ $event->title }}</h5>
+                            <p class="card-subtitle text-muted">{{ $event->description }}</p>
+                            <p class="card-subtitle badge badge-primary text-white">{{ $event->status }}</p>
+                            {{-- <a href="#" class="btn btn-primary">Register</a> --}}
                         </div>
                     </div>
                 </div>

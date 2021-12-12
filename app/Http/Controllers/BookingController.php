@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookingRequest;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 
@@ -13,14 +14,9 @@ class BookingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BookingRequest $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'date_in' => 'required|date',
-            'date_out' => 'required|date|after_or_equal:date_in',
-            'visitors' => 'required|numeric|min:1',
-        ]);
+        $validatedData = $request->validated();
 
         Booking::create($validatedData, [
             'status' => 'pending',

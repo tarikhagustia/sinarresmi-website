@@ -44,6 +44,18 @@
 </div>
 <div class="container">
     <div class="booking-box">
+        @if (session('success'))
+            <script async="false">
+                alert('We have received your booking and will be processed by us.')
+            </script>
+        @endif
+
+        @if (session('errors'))
+            <script>
+                alert('{{ session('errors')->first() }}')
+            </script>
+        @endif
+
         <form class="row no-gutters" action="{{ route('bookings.store') }}" method="POST">
             @csrf
 
