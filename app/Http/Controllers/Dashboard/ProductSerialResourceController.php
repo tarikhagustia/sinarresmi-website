@@ -8,6 +8,7 @@ use App\Http\Requests\ProductSerial\UpdateProductSerialRequest;
 use App\Models\ProductSerial;
 use App\Models\SerialNumber;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class ProductSerialResourceController extends Controller
@@ -57,7 +58,7 @@ class ProductSerialResourceController extends Controller
             $serialNumbers[] = [
                 // implement the custom serial number generation logic here
                 // 'serial_number' => "",
-                'serial_number' => $productSerial['id'] . '-' . $now . '-' . $i,
+                'serial_number' => strtoupper(Str::random(6)),
                 'product_serial_id' => $productSerial['id'],
                 'created_at' => $now,
                 'updated_at' => $now,

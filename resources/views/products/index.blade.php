@@ -34,10 +34,11 @@
                 @foreach ($products as $product)
                     <div class="col-sm-2">
                         <div class="product-item">
-                            <img src="{{ asset($product->image) }}">
+                            <img src="{{ Storage::url($product->image) }}">
                             <div class="p-1">
                                 <p class="m-0 mb-2 small">{{ $product->name }}</p>
-                                <p class="m-0 font-weight-bold">{{ $product->price }}</p>
+                                <p class="m-0 font-weight-bold">Rp. {{ number_format($product->price) }}</p>
+                                <p class="m-0 mb-2 small text-muted">{{ $product->description }}</p>
                                 <small class="m-0 text-sm text-muted">Tersedia {{ $product->stock }} Pcs</small>
                             </div>
                         </div>
