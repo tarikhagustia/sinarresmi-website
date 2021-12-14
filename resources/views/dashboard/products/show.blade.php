@@ -4,11 +4,6 @@
            {{ $product->name }}
         </h2>
 
-
-        @php
-            debug($errors);
-        @endphp
-
         <div class="bg-white col-12 d-flex flex-column justify-content-center align-items-center">
             <img src="{{ asset('storage/' . $product->image) }}" alt="product image">
             <p>Name: {{ $product->name }}</p>
@@ -22,6 +17,8 @@
 
         <div class="col-12 d-flex justify-content-center align-items-center">
             <a href="{{ route('dashboard.products.index') }}" class="btn btn-primary d-inline">Back</a>
+            
+            <a href="{{ route('dashboard.products.generate-sn', $product->id) }}" class="btn btn-success d-inline">Generate Serial Number</a>
 
             <a href="{{ route('dashboard.products.edit', $product->id) }}" class="btn btn-warning d-inline">Edit</a>
 
@@ -32,4 +29,6 @@
             </form>
         </div>
     </div>
+
+    @include('dashboard.serial-numbers.components.table')
 </x-app-layout>

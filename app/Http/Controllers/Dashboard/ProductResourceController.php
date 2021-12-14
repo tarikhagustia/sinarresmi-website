@@ -60,6 +60,7 @@ class ProductResourceController extends Controller
     {
         return view('dashboard.products.show', [
             'product' => $product,
+            'serialNumbers' => $product->serialNumbers()->paginate(12),
         ]);
     }
 
@@ -107,5 +108,12 @@ class ProductResourceController extends Controller
         $product->delete();
 
         return redirect()->route('dashboard.products.index')->with('success', 'Product deleted successfully');
+    }
+
+    public function generateSn(Request $request, Product $product)
+    {
+        return view('dashboard.products.generate-sn', [
+            'product' => $product,
+        ]);
     }
 }

@@ -67,6 +67,7 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
 
         Route::resource('/events', EventResourceController::class)->names('events');
 
+        Route::get('/products/{product}/generate-sn', [ProductResourceController::class, 'generateSn'])->name('products.generate-sn');
         Route::resource('/products', ProductResourceController::class)->names('products');
 
         Route::resource('/serial-numbers', SerialNumberResourceController::class)->names('serial-numbers');
