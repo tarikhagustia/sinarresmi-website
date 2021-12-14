@@ -9,13 +9,11 @@
                 {!! $qrCode !!}
                 <p>ID: {{ $serialNumber->id }}</p>
                 <p>Serial Number: {{ $serialNumber->serial_number }}</p>
-                <p>Product Name: {{ $serialNumber->product->name }}</p>
-                <p>Production Date: {{ $serialNumber->production_date }}</p>
-                <p>Expiration Date: {{ $serialNumber->expiration_date }}</p>
+                <p>Product Serial ID: {{ $serialNumber->product_serial_id }}</p>
             </div>
 
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <a href="{{ route('dashboard.serial-numbers.index') }}" class="btn btn-primary d-inline">Back</a>
+                <a href="{{ route('dashboard.product-serials.show', $serialNumber->product_serial_id) }}" class="btn btn-primary d-inline">Back</a>
 
                 <a href="{{ route('dashboard.serial-numbers.edit', $serialNumber->id) }}" class="btn btn-warning d-inline">Edit</a>
 

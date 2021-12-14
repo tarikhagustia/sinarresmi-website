@@ -6,9 +6,7 @@
                     class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                     <th class="px-4 py-3">ID</th>
                     <th class="px-4 py-3">Serial Number</th>
-                    <th class="px-4 py-3">Product Name</th>
-                    <th class="px-4 py-3">Production Date</th>
-                    <th class="px-4 py-3">Expiration Date</th>
+                    <th class="px-4 py-3">Product Serial ID</th>
                     <th class="px-4 py-3">Actions</th>
                 </tr>
             </thead>
@@ -17,9 +15,7 @@
                     <tr class="text-gray-700 dark:text-gray-400">
                         <th scope="row" class="px-4 py-3">{{ $serialNumber->id }}</th>
                         <td class="px-4 py-3">{{ $serialNumber->serial_number }}</td>
-                        <td class="px-4 py-3">{{ $serialNumber->product->name }}</td>
-                        <td class="px-4 py-3">{{ $serialNumber->production_date }}</td>
-                        <td class="px-4 py-3">{{ $serialNumber->expiration_date }}</td>
+                        <td class="px-4 py-3">{{ $serialNumber->product_serial_id }}</td>
                         <td class="px-4 py-3">
                             <div class="flex items-center space-x-4">
                                 {{-- Show Button --}}

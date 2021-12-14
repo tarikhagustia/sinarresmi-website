@@ -15,10 +15,8 @@ class CreateSerialNumbersTable extends Migration
     {
         Schema::create('serial_numbers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('product_serial_id')->constrained()->cascadeOnDelete();
             $table->string('serial_number')->unique();
-            $table->date('production_date');
-            $table->date('expiration_date');
             $table->timestamps();
         });
     }

@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Product;
+use App\Models\ProductSerial;
 use App\Models\SerialNumber;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -23,10 +23,8 @@ class SerialNumberFactory extends Factory
     public function definition()
     {
         return [
-            'product_id' => Product::factory(),
+            'product_serial_id' => ProductSerial::factory(),
             'serial_number' => $this->faker->unique()->ean13(),
-            'production_date' => $this->faker->dateTimeBetween('-1 years', 'now'),
-            'expiration_date' => $this->faker->dateTimeBetween('now', '+1 years'),
         ];
     }
 }

@@ -15,11 +15,10 @@ class SerialNumberResourceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('dashboard.serial-numbers.index', [
-            'serialNumbers' => SerialNumber::with(['product'])->paginate(10),
-        ]);
+        $request->session()->reflash();
+        return redirect()->route('dashboard.index');
     }
 
     /**
@@ -29,7 +28,7 @@ class SerialNumberResourceController extends Controller
      */
     public function create()
     {
-        return view('dashboard.serial-numbers.create');
+        //
     }
 
     /**
@@ -42,23 +41,18 @@ class SerialNumberResourceController extends Controller
     {
         $validated = $request->validate([
             // 'serial_number' => 'required|unique:serial_numbers',
-            'product_id' => 'required|exists:products,id',
-            'production_date' => 'required|date',
-            'expiration_date' => 'required|date|after_or_equal:production_date',
-            'product_count' => 'required|numeric|min:1',
+            'product_serial_id' => 'required|exists:product_serials,id',
+            'qty' => 'required|numeric|min:1',
         ]);
 
         $now = Carbon::now('utc')->toDateTimeString();
         $serialNumbers = [];
-        for ($i = 0; $i < $validated['product_count']; $i++) {
+        for ($i = 0; $i < $validated['qty']; $i++) {
             $serialNumbers[] = [
                 // implement the custom serial number generation logic here
                 // 'serial_number' => "",
-                'serial_number' => $validated['product_id'] . '-' . $now . '-' . $i,
-
-                'product_id' => $validated['product_id'],
-                'production_date' => $validated['production_date'],
-                'expiration_date' => $validated['expiration_date'],
+                'serial_number' => $validated['product_serial_id'] . '-' . $now . '-' . $i,
+                'product_serial_id' => $validated['product_serial_id'],
                 'created_at' => $now,
                 'updated_at' => $now,
             ];
@@ -66,7 +60,7 @@ class SerialNumberResourceController extends Controller
 
         SerialNumber::insert($serialNumbers);
 
-        return redirect()->route('dashboard.serial-numbers.index')->with('success', 'Serial Number created successfully');
+        return redirect()->route('dashboard.product-serials.show', $validated['product_serial_id'])->with('success', 'Serial Number created successfully');
     }
 
     /**
@@ -110,14 +104,12 @@ class SerialNumberResourceController extends Controller
     {
         $validated = $request->validate([
             'serial_number' => 'required|unique:serial_numbers,serial_number,'.$serialNumber->id,
-            'product_id' => 'required|exists:products,id',
-            'production_date' => 'required|date',
-            'expiration_date' => 'required|date|after_or_equal:production_date',
+            'product_serial_id' => 'required|exists:product_serials,id',
         ]);
 
         $serialNumber->update($validated);
 
-        return redirect()->route('dashboard.serial-numbers.index')->with('success', 'Serial Number updated successfully');
+        return redirect()->route('dashboard.product-serials.show', $validated['product_serial_id'])->with('success', 'Serial Number updated successfully');
     }
 
     /**
@@ -130,6 +122,6 @@ class SerialNumberResourceController extends Controller
     {
         $serialNumber->delete();
 
-        return redirect()->route('dashboard.serial-numbers.index')->with('success', 'Serial Number deleted successfully');
+        return redirect()->route('dashboard.product-serials.show', $serialNumber->product_serial_id)->with('success', 'Serial Number deleted successfully');
     }
 }

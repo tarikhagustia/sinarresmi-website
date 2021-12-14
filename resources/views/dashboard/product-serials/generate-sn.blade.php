@@ -1,7 +1,7 @@
-<x-app-layout title="Serial Numbers">
+<x-app-layout title="Generate New Serial Numbers">
     <div class="container grid px-6 mx-auto">
         <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-            Create New Serial Numbers
+            Generate New Serial Numbers
         </h2>
 
         <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -10,13 +10,13 @@
 
                 <label class="block mb-4 text-sm">
                     <span class="text-gray-700 dark:text-gray-400">
-                        Product ID
+                        Product Serial ID
                     </span>
-                    <input name="product_id" type="text" value="{{ old('product_id') }}"
+                    <input name="product_serial_id" type="text" value="{{ $productSerial->id }}"
                         class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-                        placeholder="Product ID" />
+                        placeholder="Product ID" readonly />
                     <span class="text-xs text-gray-600 dark:text-gray-400">
-                        @error('product_id')
+                        @error('product_serial_id')
                             {{ $message }}
                         @enderror
                     </span>
@@ -52,13 +52,13 @@
 
                 <label class="block mb-4 text-sm">
                     <span class="text-gray-700 dark:text-gray-400">
-                        Product Count
+                        Qty
                     </span>
-                    <input name="product_count" type="number" value="{{ old('product_count') }}" min="1"
+                    <input name="qty" type="number" value="{{ old('qty') }}" min="1"
                         class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-                        placeholder="Product Count" />
+                        placeholder="Qty" />
                     <span class="text-xs text-gray-600 dark:text-gray-400">
-                        @error('product_count')
+                        @error('qty')
                             {{ $message }}
                         @enderror
                     </span>
@@ -69,7 +69,6 @@
                     Submit
                 </button>
             </form>
-
         </div>
     </div>
 </x-app-layout>

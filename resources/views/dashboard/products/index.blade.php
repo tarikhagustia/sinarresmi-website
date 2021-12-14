@@ -21,7 +21,6 @@
                             <th scope="col" class="px-4 py-3 truncate">Description</th>
                             <th scope="col" class="px-4 py-3">SKU</th>
                             <th scope="col" class="px-4 py-3">Price</th>
-                            <th scope="col" class="px-4 py-3">Stock</th>
                             <th scope="col" class="px-4 py-3">Status</th>
                             <th scope="col" class="px-4 py-3">Actions</th>
                         </tr>
@@ -35,7 +34,6 @@
                             <td class="px-4 py-3" style="max-width: 180px; overflow:hidden;">{{ $product->description }}</td>
                             <td class="px-4 py-3">{{ $product->sku }}</td>
                             <td class="px-4 py-3">Rp. {{ $product->price }}</td>
-                            <td class="px-4 py-3">{{ $product->stock }}</td>
                             <td class="px-4 py-3">{{ $product->status }}</td>
                             <td class="px-4 py-3">
                                 <div class="flex items-center space-x-4">
