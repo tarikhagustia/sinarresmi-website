@@ -108,11 +108,4 @@ class ProductResourceController extends Controller
 
         return redirect()->route('dashboard.products.index')->with('success', 'Product deleted successfully');
     }
-
-    public function generateSn(Request $request, Product $product)
-    {
-        return view('dashboard.products.generate-sn', [
-            'product' => $product,
-        ]);
-    }
 }
