@@ -3,9 +3,6 @@
         <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
             ID: {{ $productSerial->id }}
         </h2>
-        <a href="{{ route('dashboard.product-serials.generate-sn', $productSerial->id) }}" class="inline bg-purple-600 px-3 py-2 rounded-md text-white no-underline">
-            Generate Serial Number
-        </a>
 
         <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
             <div class="mt-5 col-12 d-flex flex-column justify-content-center align-items-center">

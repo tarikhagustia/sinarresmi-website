@@ -49,6 +49,24 @@ class ProductSerialResourceController extends Controller
         return redirect()->route('dashboard.product-serials.index')->with('success', 'Product Serial created successfully.');
     }
 
+    private function storeSn($productSerial)
+    {
+        $now = Carbon::now('utc')->toDateTimeString();
+        $serialNumbers = [];
+        for ($i = 0; $i < $productSerial['qty']; $i++) {
+            $serialNumbers[] = [
+                // implement the custom serial number generation logic here
+                // 'serial_number' => "",
+                'serial_number' => $productSerial['id'] . '-' . $now . '-' . $i,
+                'product_serial_id' => $productSerial['id'],
+                'created_at' => $now,
+                'updated_at' => $now,
+            ];
+        }
+
+        SerialNumber::insert($serialNumbers);
+    }
+
     /**
      * Display the specified resource.
      *
@@ -101,12 +119,5 @@ class ProductSerialResourceController extends Controller
         $productSerial->delete();
 
         return redirect()->route('dashboard.product-serials.index')->with('success', 'Product Serial deleted successfully.');
-    }
-
-    public function generateSn(Request $request, ProductSerial $productSerial)
-    {
-        return view('dashboard.product-serials.generate-sn', [
-            'productSerial' => $productSerial,
-        ]);
     }
 }

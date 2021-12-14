@@ -39,28 +39,7 @@ class SerialNumberResourceController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            // 'serial_number' => 'required|unique:serial_numbers',
-            'product_serial_id' => 'required|exists:product_serials,id',
-            'qty' => 'required|numeric|min:1',
-        ]);
-
-        $now = Carbon::now('utc')->toDateTimeString();
-        $serialNumbers = [];
-        for ($i = 0; $i < $validated['qty']; $i++) {
-            $serialNumbers[] = [
-                // implement the custom serial number generation logic here
-                // 'serial_number' => "",
-                'serial_number' => $validated['product_serial_id'] . '-' . $now . '-' . $i,
-                'product_serial_id' => $validated['product_serial_id'],
-                'created_at' => $now,
-                'updated_at' => $now,
-            ];
-        }
-
-        SerialNumber::insert($serialNumbers);
-
-        return redirect()->route('dashboard.product-serials.show', $validated['product_serial_id'])->with('success', 'Serial Number created successfully');
+        // 
     }
 
     /**

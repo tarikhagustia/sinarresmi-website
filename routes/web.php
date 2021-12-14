@@ -69,10 +69,9 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
         Route::resource('/events', EventResourceController::class)->names('events');
 
         Route::resource('/products', ProductResourceController::class)->names('products');
-        
-        Route::get('/products-serials/{productSerial}/generate-sn', [ProductSerialResourceController::class, 'generateSn'])->name('product-serials.generate-sn');
+
         Route::resource('product-serials', ProductSerialResourceController::class)->names('product-serials');
         
-        Route::resource('/serial-numbers', SerialNumberResourceController::class)->except(['create'])->names('serial-numbers');
+        Route::resource('/serial-numbers', SerialNumberResourceController::class)->except(['create', 'store'])->names('serial-numbers');
     });
 });
