@@ -60,7 +60,6 @@ class ProductResourceController extends Controller
     {
         return view('dashboard.products.show', [
             'product' => $product,
-            'serialNumbers' => $product->serialNumbers()->paginate(12),
         ]);
     }
 

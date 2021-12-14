@@ -11,14 +11,13 @@
             <p>Description: {{ $product->description }}</p>
             <p>SKU: {{ $product->sku }}</p>
             <p>Price: Rp. {{ $product->price }}</p>
-            <p>Stock: {{ $product->stock }}</p>
             <p>Status: {{ $product->status }}</p>
         </div>
 
         <div class="col-12 d-flex justify-content-center align-items-center">
             <a href="{{ route('dashboard.products.index') }}" class="btn btn-primary d-inline">Back</a>
             
-            <a href="{{ route('dashboard.products.generate-sn', $product->id) }}" class="btn btn-success d-inline">Generate Serial Number</a>
+            <a href="{{ route('dashboard.products-serial.create') }}" class="btn btn-success d-inline">Create Product Serial</a>
 
             <a href="{{ route('dashboard.products.edit', $product->id) }}" class="btn btn-warning d-inline">Edit</a>
 
@@ -29,6 +28,4 @@
             </form>
         </div>
     </div>
-
-    @include('dashboard.serial-numbers.components.table')
 </x-app-layout>
