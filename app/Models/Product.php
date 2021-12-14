@@ -11,8 +11,8 @@ class Product extends Model
 
     protected $guarded = ['id'];
 
-    public function serialNumbers()
+    public function productSerials()
     {
-        return $this->hasMany(SerialNumber::class);
+        return $this->hasMany(ProductSerial::class);
     }
 }

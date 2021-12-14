@@ -14,6 +14,14 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        User::unguard();
+        if (User::count() == 0) {
+            User::create([
+                'name' => 'Admin',
+                'email' => 'admin@example.com',
+                'password' => bcrypt('admin'),
+            ]);
+        }
         User::factory(10)->create();
     }
 }

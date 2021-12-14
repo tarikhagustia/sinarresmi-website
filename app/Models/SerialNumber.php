@@ -11,8 +11,8 @@ class SerialNumber extends Model
 
     protected $guarded = ['id'];
 
-    public function product()
+    public function productSerial()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(ProductSerial::class);
     }
 }

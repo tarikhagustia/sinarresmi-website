@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Product;
+namespace App\Http\Requests\ProductSerial;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreProductRequest extends FormRequest
+class StoreProductSerialRequest extends FormRequest
 {
     protected $redirectRoute = 'dashboard.products.create';
 
@@ -26,13 +26,10 @@ class StoreProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255',
-            'category' => 'required|string|max:255',
-            'description' => 'required|string',
-            'image' => 'image|file',
-            'sku' => 'required|string',
-            'price' => 'required|numeric',
-            'status' => 'required|string',
+            'product_id' => 'required|exists:products,id',
+            'production_date' => 'required|date',
+            'expiration_date' => 'required|date',
+            'qty' => 'required|numeric|min:0',
         ];
     }
 }
