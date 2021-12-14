@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProductSerial\StoreProductSerialRequest;
+use App\Http\Requests\ProductSerial\UpdateProductSerialRequest;
 use App\Models\ProductSerial;
-use App\Http\Requests\StoreProductSerialRequest;
-use App\Http\Requests\UpdateProductSerialRequest;
+use App\Models\SerialNumber;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class ProductSerialResourceController extends Controller
 {
@@ -16,7 +19,9 @@ class ProductSerialResourceController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.product-serials.index', [
+            'productSerials' => ProductSerial::with('product')->paginate(10),
+        ]);
     }
 
     /**
@@ -26,7 +31,7 @@ class ProductSerialResourceController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.product-serials.create');
     }
 
     /**
@@ -37,7 +42,11 @@ class ProductSerialResourceController extends Controller
      */
     public function store(StoreProductSerialRequest $request)
     {
-        //
+        $productSerial = ProductSerial::create($request->validated());
+
+        $this->storeSn($productSerial);
+
+        return redirect()->route('dashboard.product-serials.index')->with('success', 'Product Serial created successfully.');
     }
 
     /**
@@ -48,7 +57,10 @@ class ProductSerialResourceController extends Controller
      */
     public function show(ProductSerial $productSerial)
     {
-        //
+        return view('dashboard.product-serials.show', [
+            'productSerial' => $productSerial,
+            'serialNumbers' => $productSerial->serialNumbers()->paginate(10),
+        ]);
     }
 
     /**
@@ -59,7 +71,9 @@ class ProductSerialResourceController extends Controller
      */
     public function edit(ProductSerial $productSerial)
     {
-        //
+        return view('dashboard.product-serials.edit', [
+            'productSerial' => $productSerial,
+        ]);
     }
 
     /**
@@ -71,7 +85,9 @@ class ProductSerialResourceController extends Controller
      */
     public function update(UpdateProductSerialRequest $request, ProductSerial $productSerial)
     {
-        //
+        $productSerial->update($request->validated());
+
+        return redirect()->route('dashboard.product-serials.index')->with('success', 'Product Serial updated successfully.');
     }
 
     /**
@@ -82,6 +98,15 @@ class ProductSerialResourceController extends Controller
      */
     public function destroy(ProductSerial $productSerial)
     {
-        //
+        $productSerial->delete();
+
+        return redirect()->route('dashboard.product-serials.index')->with('success', 'Product Serial deleted successfully.');
+    }
+
+    public function generateSn(Request $request, ProductSerial $productSerial)
+    {
+        return view('dashboard.product-serials.generate-sn', [
+            'productSerial' => $productSerial,
+        ]);
     }
 }

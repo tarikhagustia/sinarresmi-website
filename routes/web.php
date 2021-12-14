@@ -6,6 +6,7 @@ use App\Http\Controllers\Dashboard\EventResourceController;
 use App\Http\Controllers\Dashboard\ProductResourceController;
 use App\Http\Controllers\Dashboard\SerialNumberResourceController;
 use App\Http\Controllers\Dashboard\UserResourceController;
+use App\Http\Controllers\Dashboard\ProductSerialResourceController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProductController;
@@ -67,9 +68,11 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
 
         Route::resource('/events', EventResourceController::class)->names('events');
 
-        Route::get('/products/{product}/generate-sn', [ProductResourceController::class, 'generateSn'])->name('products.generate-sn');
         Route::resource('/products', ProductResourceController::class)->names('products');
-
-        Route::resource('/serial-numbers', SerialNumberResourceController::class)->names('serial-numbers');
+        
+        Route::get('/products-serials/{productSerial}/generate-sn', [ProductSerialResourceController::class, 'generateSn'])->name('product-serials.generate-sn');
+        Route::resource('product-serials', ProductSerialResourceController::class)->names('product-serials');
+        
+        Route::resource('/serial-numbers', SerialNumberResourceController::class)->except(['create'])->names('serial-numbers');
     });
 });
