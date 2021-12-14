@@ -12,9 +12,13 @@
                     <span class="text-gray-700 dark:text-gray-400">
                         Product ID
                     </span>
-                    <input name="product_id" type="text" value="{{ old('product_id') }}"
-                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-                        placeholder="Product ID" />
+                    <select name="product_id" class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+                    placeholder="Product ID">
+                        <option value="">Select Product</option>
+                        @foreach($products as $product)
+                            <option value="{{ $product->id }}">{{ $product->name }}</option>
+                        @endforeach
+                    </select>
                     <span class="text-xs text-gray-600 dark:text-gray-400">
                         @error('product_id')
                             {{ $message }}

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductSerial\StoreProductSerialRequest;
 use App\Http\Requests\ProductSerial\UpdateProductSerialRequest;
+use App\Models\Product;
 use App\Models\ProductSerial;
 use App\Models\SerialNumber;
 use Carbon\Carbon;
@@ -31,7 +32,9 @@ class ProductSerialResourceController extends Controller
      */
     public function create()
     {
-        return view('dashboard.product-serials.create');
+        return view('dashboard.product-serials.create', [
+            'products' => Product::all(),
+        ]);
     }
 
     /**
