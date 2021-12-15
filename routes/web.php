@@ -40,7 +40,7 @@ Route::get('/contact-us', function () {
 
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
-Route::get('/products/original-check/{code}', [ProductController::class, 'originalCheck']);
+Route::get('/products/original-check/{code}', [ProductController::class, 'originalCheck'])->name('original.check');
 
 Route::get('/bookings', function() {
     return redirect()->route('home');
@@ -70,8 +70,12 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
 
         Route::resource('/products', ProductResourceController::class)->names('products');
 
+        Route::get('product-serials/qr-code/print', function() {
+            return response(QRCode::url(request()->get('label'))->png(), 200, ['Content-Type' => 'image/png']);
+        })->name('product-serial.qr');
         Route::resource('product-serials', ProductSerialResourceController::class)->names('product-serials');
-        
+        Route::get('product-serials/{serial}/print', [ProductSerialResourceController::class, 'print'])->name('product-serials.print');
+       
         Route::resource('/serial-numbers', SerialNumberResourceController::class)->except(['create', 'store'])->names('serial-numbers');
     });
 });

@@ -14,6 +14,7 @@
             </div>
 
             <div class="col-12 d-flex justify-content-center align-items-center">
+                <a target="_blank" href="{{ route('dashboard.product-serials.print', $productSerial) }}" class="btn btn-primary d-inline">Cetak</a>
                 <a href="{{ route('dashboard.product-serials.index') }}" class="btn btn-primary d-inline">Back</a>
 
                 <a href="{{ route('dashboard.product-serials.edit', $productSerial->id) }}" class="btn btn-warning d-inline">Edit</a>

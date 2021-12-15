@@ -15,4 +15,10 @@ class SerialNumber extends Model
     {
         return $this->belongsTo(ProductSerial::class);
     }
+
+    public function getImageUrlAttribute()
+    {
+        $label = route('original.check', $this->serial_number);
+        return route('dashboard.product-serial.qr').'?label='.$label;
+    }
 }

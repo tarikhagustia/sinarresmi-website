@@ -124,4 +124,9 @@ class ProductSerialResourceController extends Controller
 
         return redirect()->route('dashboard.product-serials.index')->with('success', 'Product Serial deleted successfully.');
     }
+
+    public function print(ProductSerial $serial)
+    {
+        return view('dashboard.serial-numbers.print', compact('serial'));
+    }
 }
