@@ -10,6 +10,9 @@
             <p>Date In: {{ $booking->date_in }}</p>
             <p>Date Out: {{ $booking->date_out }}</p>
             <p>Visitors: {{ $booking->visitors }}</p>
+            <p>Email: {{ $booking->email }}</p>
+            <p>Phone: {{ $booking->phone_number }}</p>
+            <p>Purpose: {{ $booking->purpose }}</p>
             <p>Status: {{ $booking->status }}</p>
         </div>
 

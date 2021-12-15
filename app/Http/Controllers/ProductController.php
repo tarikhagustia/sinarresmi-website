@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\SerialNumber;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -21,6 +22,13 @@ class ProductController extends Controller
 
     public function originalCheck($code)
     {
-        return view('products.original', compact('code'));
+        $serialNumber = null;
+        if($serialNumber = SerialNumber::where('serial_number', $code)->first()) {
+            $code = true;
+        }else{
+            $code = false;
+        }
+        
+        return view('products.original', compact('code', 'serialNumber'));
     }
 }

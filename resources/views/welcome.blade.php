@@ -56,52 +56,81 @@
             </script>
         @endif
 
-        <form class="row no-gutters" action="{{ route('bookings.store') }}" method="POST">
+        <form  action="{{ route('bookings.store') }}" method="POST">
             @csrf
-
-            <div class="col-md d-flex">
-                <div class="form-group p-4 border-1">
-                    <label for="#" class="font-weight-bold text-success">Visitor Name</label>
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div class="icon mr-3"><span class="far fa-user"></span></div>
-                        <input name="name" type="text" class="form-control form-control-sm form-booking" placeholder="Your team or Individual name">
+            <div class="row no-gutters">
+                <div class="col-md-3 d-flex">
+                    <div class="form-group p-4 border-1">
+                        <label for="#" class="font-weight-bold text-success">Visitor Name</label>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="icon mr-3"><span class="far fa-user"></span></div>
+                            <input name="name" type="text" class="form-control form-control-sm form-booking" placeholder="Your team or Individual name">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+                    <div class="form-group p-4">
+                        <label for="#" class="font-weight-bold text-success">Date In</label>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="icon mr-3"><span class="far fa-calendar"></span></div>
+                            <input name="date_in" type="date" class="form-control form-control-sm form-booking" placeholder="Visit Date">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+                    <div class="form-group p-4">
+                        <label for="#" class="font-weight-bold text-success">Date Out</label>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="icon mr-3"><span class="far fa-calendar"></span></div>
+                            <input name="date_out" type="date" class="form-control form-control-sm form-booking" placeholder="Visit Date">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+                    <div class="form-group p-4">
+                        <label for="#" class="font-weight-bold text-success">Visitors</label>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="icon mr-3"><span class="far fa-user"></span></div>
+                            <input name="visitors" type="number" class="form-control form-control-sm form-booking" placeholder="Visitors" min="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+                    <div class="form-group p-4">
+                        <label for="#" class="font-weight-bold text-success">Email</label>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="icon mr-3"><span class="fas fa-envelope"></span></div>
+                            <input name="email" type="text" class="form-control form-control-sm form-booking" placeholder="Email">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+                    <div class="form-group p-4">
+                        <label for="#" class="font-weight-bold text-success">Phone</label>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="icon mr-3"><span class="fas fa-phone"></span></div>
+                            <input name="phone_number" type="text" class="form-control form-control-sm form-booking" placeholder="Visitors">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex">
+                    <div class="form-group p-4">
+                        <label for="#" class="font-weight-bold text-success">Purpose</label>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="icon mr-3"><span class="fas fa-check"></span></div>
+                            <input name="purpose" type="text" class="form-control form-control-sm form-booking" placeholder="Purpose">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex p-4">
+                    <div class="form-group d-flex w-100 border-0">
+                        <div class="form-field w-100 align-items-center d-flex">
+                            <button type="submit" class="form-control rounded-0 btn btn-success btn-booking">Booking Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md d-flex">
-                <div class="form-group p-4">
-                    <label for="#" class="font-weight-bold text-success">Date In</label>
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div class="icon mr-3"><span class="far fa-calendar"></span></div>
-                        <input name="date_in" type="date" class="form-control form-control-sm form-booking" placeholder="Visit Date">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md d-flex">
-                <div class="form-group p-4">
-                    <label for="#" class="font-weight-bold text-success">Date Out</label>
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div class="icon mr-3"><span class="far fa-calendar"></span></div>
-                        <input name="date_out" type="date" class="form-control form-control-sm form-booking" placeholder="Visit Date">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md d-flex">
-                <div class="form-group p-4">
-                    <label for="#" class="font-weight-bold text-success">Visitors</label>
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div class="icon mr-3"><span class="far fa-user"></span></div>
-                        <input name="visitors" type="number" class="form-control form-control-sm form-booking" placeholder="Visitors" min="1">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md d-flex p-4">
-                <div class="form-group d-flex w-100 border-0">
-                    <div class="form-field w-100 align-items-center d-flex">
-                        <button type="submit" class="form-control rounded-0 btn btn-success btn-booking">Booking Now</button>
-                    </div>
-                </div>
-            </div>
+            
         </form>
     </div>
 

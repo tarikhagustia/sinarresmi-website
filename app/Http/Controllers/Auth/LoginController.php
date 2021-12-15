@@ -31,7 +31,7 @@ class LoginController extends Controller
         }
 
         $request->session()->regenerate();
-
+        
         return redirect()->to('/dashboard')->with('alert', [
             'type' => 'success',
             'message' => 'You have successfully logged in.',
