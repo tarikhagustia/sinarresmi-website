@@ -109,7 +109,7 @@
                         <label for="#" class="font-weight-bold text-success">Phone</label>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="icon mr-3"><span class="fas fa-phone"></span></div>
-                            <input name="phone_number" type="text" class="form-control form-control-sm form-booking" placeholder="Visitors">
+                            <input name="phone_number" type="text" class="form-control form-control-sm form-booking" placeholder="Phone">
                         </div>
                     </div>
                 </div>
