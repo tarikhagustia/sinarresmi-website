@@ -31,9 +31,11 @@
                         <img class="card-img-top" src="{{ asset('storage/'.$event->image) }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{ $event->title }}</h5>
-                            <p class="card-subtitle text-muted">{{ $event->description }}</p>
+                            <p class="small text-muted m-0">{{ $event->date_start }} to {{ $event->date_end }}</p>
+                            <p class="card-subtitle text-muted">{{ Str::limit($event->description, 100, '...') }}</p>
                             <p class="card-subtitle badge badge-primary text-white">{{ $event->status }}</p>
-                            {{-- <a href="#" class="btn btn-primary">Register</a> --}}
+                            <br>
+                            <a href="{{ url('/?desc=I want to join '.$event->title) }}" class="btn btn-primary mt-2">Register</a>
                         </div>
                     </div>
                 </div>

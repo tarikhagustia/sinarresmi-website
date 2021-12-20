@@ -14,7 +14,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light navbar-t" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{ asset('images/logo.png') }}">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
@@ -146,7 +146,7 @@
             <p  class="text-muted">
                 The Kasepuhan Sinar Official community still carries out the traditions of their ancestors in the agricultural sector. In this traditional village, from the process of planting rice to harvesting it is always accompanied by ceremonies related to agriculture. The most famous ceremony is the Seren Taun which is held to celebrate the rice harvest—and is usually crowded with tourists.
             </p>
-            <button type="submit" class="rounded-0 btn btn-success btn-default-1">Upcoming Event</button>
+            <a href="{{ url('/events') }}" type="submit" class="rounded-0 btn btn-success btn-default-1">Upcoming Event</a>
         </div>
     </div>
 
@@ -169,18 +169,18 @@
     </div>
     <div class="product-list mt-5">
         <div class="row">
-            @for ($i = 0; $i < 6; $i++)
-                <div class="col-sm-2">
-                    <div class="product-item">
-                        <img src="{{ asset('images/sayur.jpeg') }}">
-                        <div class="p-1">
-                            <p class="m-0 mb-2 small">Sayur Mayur 500gr</p>
-                            <p class="m-0 font-weight-bold">Rp. 20.000</p>
-                            <small class="m-0 text-sm text-muted">Tersedia 10 Pcs</small>
+            @foreach (\App\Models\Product::all() as $product)
+                    <div class="col-sm-2">
+                        <div class="product-item mb-2">
+                            <img src="{{ Storage::url($product->image) }}" height="100">
+                            <div class="p-1">
+                                <p class="m-0 mb-2 small">{{ $product->name }}</p>
+                                <p class="m-0 font-weight-bold">Rp. {{ number_format($product->price) }}</p>
+                                <small class="m-0 text-sm text-muted">Tersedia {{ $product->stock }} Pcs</small>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endfor
+                @endforeach
         </div>
     </div>
 </div>

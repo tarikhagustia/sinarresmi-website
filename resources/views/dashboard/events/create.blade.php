@@ -68,9 +68,9 @@
                     <span class="text-gray-700 dark:text-gray-400">
                         Description
                     </span>
-                    <input name="description" type="text" value="{{ old('description') }}"
-                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-                        placeholder="Description" />
+                    <textarea name="description" type="text" value="{{ old('description') }}"
+                    class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+                    placeholder="Description" ></textarea>
                     <span class="text-xs text-gray-600 dark:text-gray-400">
                         @error('description')
                             {{ $message }}
