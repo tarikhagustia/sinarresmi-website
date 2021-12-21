@@ -4,4 +4,9 @@
     <li class="nav-item"><a href="{{ url('events') }}" class="nav-link">Events</a></li>
     <li class="nav-item"><a href="{{ url('products') }}" class="nav-link">Products</a></li>
     <li class="nav-item"><a href="{{ url('contact-us') }}" class="nav-link">Contact</a></li>
+    <li class="nav-item mt-3">
+        <span class="flag-icon flag-icon-id"></span>
+        <span class="flag-icon flag-icon-us"></span>
+    </li>
+    
 </ul>

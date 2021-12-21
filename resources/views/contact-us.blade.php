@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-    <div style="background-image: url({{ asset('images/hero-bg.png') }}); background-repeat: no-repeat; background-size: cover">
+    <div
+        style="background-image: url({{ asset('images/hero-bg.png') }}); background-repeat: no-repeat; background-size: cover">
         <div class="container pb-4 pt-5">
             <div class="row">
                 <div class="col-sm-6 border p-4">
@@ -15,24 +16,32 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
+                @if (session('success'))
+                    <div class="alert alert-success">{{ session('success') }}</div>
+                @endif
                 <h3 class="text-center">Contact Us</h3>
-                <div class="row justify-content-center">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Your Name</label>
-                            <input class="form-control">
+                <form method="POST" action="{{ url('/contact-us') }}">
+                    <div class="row justify-content-center">
+
+                        @csrf
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input name="name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Your Email</label>
+                                <input name="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Your Question</label>
+                                <textarea name="question" class="form-control"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">Submit</button>
                         </div>
-                        <div class="form-group">
-                            <label>Your Email</label>
-                            <input class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Your Question</label>
-                            <textarea class="form-control"></textarea>
-                        </div>
-                        <button class="btn btn-success btn-block">Submit</button>
+
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

@@ -8,6 +8,7 @@ use App\Http\Controllers\Dashboard\SerialNumberResourceController;
 use App\Http\Controllers\Dashboard\UserResourceController;
 use App\Http\Controllers\Dashboard\ProductSerialResourceController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -37,6 +38,8 @@ Route::get('/events', [EventController::class, 'index'])->name('events.index');
 Route::get('/contact-us', function () {
     return view('contact-us');
 });
+
+Route::post('/contact-us', [ContactController::class, 'store']);
 
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 
