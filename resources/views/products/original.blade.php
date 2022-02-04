@@ -33,7 +33,7 @@
         @else
             <h3 class="text-center">Kode Produk tidak terdaftar pada sistem kami</h3>
             <p class="text-muted">Kami mendeteksi bawah kode produk yang ada masukkan tidak valid / palsu. kami himbau
-                untuk mendapatkan produk - produk sinar resmi original dapat didapatkan di gerai - gerai yang terdaftar atau
+                untuk mendapatkan produk - produk Kasepuhan Sinar Resmi original dapat didapatkan di gerai - gerai yang terdaftar atau
                 offial online shop kami</p>
         @endif
     </div>

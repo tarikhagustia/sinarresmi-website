@@ -9,7 +9,9 @@ use App\Http\Controllers\Dashboard\UserResourceController;
 use App\Http\Controllers\Dashboard\ProductSerialResourceController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Dashboard\NewsResourceController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +37,9 @@ Route::get('/about-us', function () {
 
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 
+Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+Route::get('/news/{slug}', [NewsController::class, 'show'])->name('news.show');
+
 Route::get('/contact-us', function () {
     return view('contact-us');
 });
@@ -52,13 +57,6 @@ Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.st
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     // UI Template routes
-    // Route::view('forms', 'dashboard.__templates__.forms')->name('forms');
-    // Route::view('cards', 'dashboard.__templates__.cards')->name('cards');
-    // Route::view('charts', 'dashboard.__templates__.charts')->name('charts');
-    // Route::view('buttons', 'dashboard.__templates__.buttons')->name('buttons');
-    // Route::view('modals', 'dashboard.__templates__.modals')->name('modals');
-    // Route::view('tables', 'dashboard.__templates__.tables')->name('tables');
-    // Route::view('calendar', 'dashboard.__templates__.calendar')->name('calendar');
 
     Route::prefix('dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('index');
@@ -68,6 +66,7 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
         Route::put('/bookings/{booking}/approve', [BookingResourceController::class, 'approve'])->name('bookings.approve');
         Route::put('/bookings/{booking}/reject', [BookingResourceController::class, 'reject'])->name('bookings.reject');
         Route::resource('/bookings', BookingResourceController::class)->names('bookings');
+        Route::resource('/news', NewsResourceController::class)->names('news');
 
         Route::resource('/events', EventResourceController::class)->names('events');
 

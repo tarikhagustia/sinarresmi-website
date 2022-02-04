@@ -33,7 +33,7 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
             <div class="col-md-7 ftco-animate fadeInUp ftco-animated hero">
-                <span class="subheading">Welcome to Sinar Resmi</span>
+                <span class="subheading">Welcome to Kasepuhan Sinar Resmi</span>
                 <h1 class="mb-4">Discover cultural diversity in this place</h1>
                 <p class="caps">A landscape is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area</p>
             </div>
@@ -153,8 +153,8 @@
 
     <div class="divider"></div>
     <div class="text-center">
-        <p class="text-muted m-0">Find beautiful place around sinar resmi</p>
-        <h3 class="title">Popular Places Near Sinar Resmi</h3>
+        <p class="text-muted m-0">Find beautiful place around Kasepuhan Sinar Resmi</p>
+        <h3 class="title">Popular Places Near Kasepuhan Sinar Resmi</h3>
     </div>
 </div>
 <div class="row mt-5 no-gutters">

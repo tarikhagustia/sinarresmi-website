@@ -5,7 +5,7 @@
         <div class="container pb-4 pt-5">
             <div class="row">
                 <div class="col-sm-6 border p-4">
-                    <h1 class="text-white font-weight-bold">Cultural Activities</h1>
+                    <h1 class="text-white font-weight-bold">Kasepuhan News</h1>
                     <p class="caps text-white">Even though it is a traditional village, Kasepuhan Sinar Official does not isolate itself from the times. In Kasepuhan, electricity is already available, and even the residents are used to using cell phones. Some of the residents' houses already use bricks and cement—although there are still some that only use wood and bamboo and palm fiber as the roof..</p>
                 </div>
             </div>
@@ -25,22 +25,21 @@
                     </div>
                 </div>
             </div> --}}
-            @foreach ($events as $event)
+            @foreach ($news as $event)
                 <div class="col-sm-3">
                     <div class="card">
                         <img class="card-img-top" src="{{ asset('storage/'.$event->image) }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{ $event->title }}</h5>
-                            <p class="small text-muted m-0">{{ $event->date_start }} to {{ $event->date_end }}</p>
                             <p class="card-subtitle text-muted">{{ Str::limit($event->description, 100, '...') }}</p>
-                            <p class="card-subtitle badge badge-primary text-white">{{ $event->status }}</p>
+                            
                             <br>
-                            <a href="{{ url('/?desc=I want to join '.$event->title) }}" class="btn btn-primary mt-2">Register</a>
+                            <a href="{{ route('news.show', $event->slug) }}" class="text-sm">Read More..</a>
                         </div>
                     </div>
                 </div>
             @endforeach
-            {{ $events->links() }}
+            {{ $news->links() }}
         </div>
     </div>
 @endsection
