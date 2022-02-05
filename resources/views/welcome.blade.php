@@ -119,7 +119,7 @@
                         <label for="#" class="font-weight-bold text-success">Purpose</label>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="icon mr-3"><span class="fas fa-check"></span></div>
-                            <input name="purpose" type="text" class="form-control form-control-sm form-booking" placeholder="Purpose">
+                            <input name="purpose" type="text" class="form-control form-control-sm form-booking" placeholder="Purpose" value="{{ request()->get('desc') }}">
                         </div>
                     </div>
                 </div>
