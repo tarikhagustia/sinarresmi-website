@@ -44,6 +44,10 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
+Route::get('/facility', function () {
+    return view('facility');
+});
+
 Route::post('/contact-us', [ContactController::class, 'store']);
 
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');

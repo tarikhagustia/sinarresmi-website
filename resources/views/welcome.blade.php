@@ -135,19 +135,19 @@
         </form>
     </div>
 
-    <div class="row">
+    <div class="row align-items-center">
         <div class="col-sm-6">
-            <img src="{{ asset('images/section-1.png') }}" class="img-fluid">
+            <img src="{{ asset('images/home-1.jpeg') }}" class="img-fluid">
         </div>
         <div class="col-sm-6">
-            <h3 class="title">It's time to start your adventure</h3>
+            <h3 class="title">Cultural Acculturation</h3>
             <p class="text-muted">
-                Kasepuhan Sinar Official led by Abah Asep Nugraha is located in Cisolok District, and is a diversity of one of the traditional villages of Kasepuhan Banten Kidul which is still preserved. Kasepuhan Sinar Official is an integral part of the cultural aspect of the Ciletuh Geopark.
+                Kasepuhan Adat Banten Kidul is a Sundanese indigenous people who live around Mount Halimun, precisely in Sirnaresmi Village, Cisolok District, Sukabumi Regency, West Java Province. The Kasepuhan Indigenous people of Banten Kidul believe that they are descended from the Sunda Kingdom which has existed since 500 years ago in Pakuan Pajajaran, namely in the 16th century AD. Based on this belief, it can be understood that the life of the Kasepuhan Indigenous people of Banten Kidul until now is based on the culture of the Sunda Wiwitan ancestors.
             </p>
             <p  class="text-muted">
                 The Kasepuhan Sinar Official community still carries out the traditions of their ancestors in the agricultural sector. In this traditional village, from the process of planting rice to harvesting it is always accompanied by ceremonies related to agriculture. The most famous ceremony is the Seren Taun which is held to celebrate the rice harvest—and is usually crowded with tourists.
             </p>
-            <a href="{{ url('/events') }}" type="submit" class="rounded-0 btn btn-success btn-default-1">Upcoming Event</a>
+            {{-- <a href="{{ url('/events') }}" type="submit" class="rounded-0 btn btn-success btn-default-1">Upcoming Event</a> --}}
         </div>
     </div>
 

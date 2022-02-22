@@ -13,7 +13,7 @@
     </div>
     <div class="divider"></div>
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center mb-5">
             <div class="col-sm-6">
                 <img class="img-fluid" src="{{ asset('images/about-us.jpg') }}">
             </div>
@@ -21,17 +21,31 @@
             <div class="col-sm-6">
                 <h3>History of Kasepuhan Sinar Resmi</h3>
                 <p class="text-muted">
-                    Sirnaresmi is one of the traditional villages in the Kasepuhan Sinar Official neighborhood. History records, this kasepuhan is a remnant or inheritance from the kingdom that once stood in Sundanese land.
-                </p>
+                    Kasepuhan Adat Banten Kidul is a Sundanese indigenous people who live around Mount Halimun, precisely in Sirnaresmi Village, Cisolok District, Sukabumi Regency, West Java Province. The Kasepuhan Indigenous Banten Kidul people believe that they are descended from the Sunda Kingdom which has existed since 500 years ago in Pakuan Pajajaran, namely in the 16th century. Sunda Wiwitan ancestor. 
+                </p> 
 
                 <p class="text-muted">
-                    Kasepuhan Sinar Official is one of the indigenous communities who are members of the Banten Kidul Indigenous Unity. This indigenous community is spread around Mount Halimun which is located in the area of ​​two provinces, namely West Java and Banten.
-                </p>
-
-                <p class="text-muted">
-                    Ethnically, the people of kasepuhan are Urang Sunda, including the Kanekes people or the Baduy people. The daily lives of residents are colored by Kanekes traditions, habits, and customs, including the wisdom of responding to nature and the environment.
+                    However, along with the entry of Islam in the Kasepuhan Sinar Official environment, people's lives harmonize Islamic religious values ​​with the values ​​of Sunda Wiwitan culture in the daily life of the Kasepuhan Indigenous people of Banten Kidul. The existence of harmony between the two values ​​shows acculturation in people's lives. This acculturation of cultural values ​​is found in three Kasepuhan who are included in the Kasepuhan Adat Banten Kidul namely Kasepuhan Sinar Official, Kasepuhan Cipta Mulya, and Kasepuhan Cipta Degree.
                 </p>
             </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-sm-6">
+                <h3>Culture</h3>
+                <p class="text-muted">
+                    Kasepuhan Sinar Official is a traditional settlement that still maintains and carries out the values ​​that exist in the Sunda Wiwitan culture. One of the ritual activities carried out by the Kasepuhan Sinar Official community is the Seren Taun activity. This activity is a ritual activity that is carried out once a year as a form of expressing gratitude to God Almighty for the abundant harvest. Based on this ritual activity, it shows that the Kasepuhan Sinar Official community is an agrarian society.
+                </p>
+
+                <p class="text-muted">
+                    In the life of the Kasepuhan Sinar Official community, there is a traditional leader as the person in charge of social, economic, and spiritual life based on the values ​​of Sunda Wiwitan culture. The elected traditional leader is descended from the founder of the official Kasepuhan Sinar who received wangsit (orders from ancestors). The traditional leader in Kasepuhan Sinar Official is called Abah.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-fluid" src="{{ asset('images/culture.jpeg') }}">
+            </div>
+
+           
         </div>
     </div>
 @stop
