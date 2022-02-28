@@ -11,6 +11,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Dashboard\NewsResourceController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -44,9 +45,8 @@ Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
-Route::get('/facility', function () {
-    return view('facility');
-});
+Route::get('/facility', [FacilityController::class, 'index'])->name('facility.index');
+Route::get('/facility/{name}', [FacilityController::class, 'show'])->name('facility.show');
 
 Route::post('/contact-us', [ContactController::class, 'store']);
 
