@@ -2,8 +2,8 @@
 
 @section('content')
     <div
-        style="background-image: url({{ asset('images/hero-bg.png') }}); background-repeat: no-repeat; background-size: cover">
-        <div class="container pb-4 pt-5">
+        style="background: url({{ asset('images/hero-bg-2.png') }}) rgba(0, 0, 0, 0.5);background-blend-mode: multiply;  background-repeat: no-repeat; background-size: cover">
+        <div class="container py-5">
             <div class="row">
                 <div class="col-sm-6 border p-4">
                     <h1 class="text-white font-weight-bold">{{__("string.Contact Us")}}</h1>

@@ -40,7 +40,7 @@ Route::group(
 
     Route::get('/about-us', function () {
         return view('about');
-    });
+    })->name('about-us');
 
     Route::get('/events', [EventController::class, 'index'])->name('events.index');
 
@@ -49,7 +49,7 @@ Route::group(
 
     Route::get('/contact-us', function () {
         return view('contact-us');
-    });
+    })->name('contact-us');
 
     Route::get('/facility', [FacilityController::class, 'index'])->name('facility.index');
     Route::get('/facility/{name}', [FacilityController::class, 'show'])->name('facility.show');
