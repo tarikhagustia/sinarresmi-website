@@ -6,9 +6,8 @@
         <div class="container pb-4 pt-5">
             <div class="row">
                 <div class="col-sm-6 border p-4">
-                    <h1 class="text-white font-weight-bold">Products</h1>
-                    <p class="caps text-white">Find original products from Kasupuhan sinar resmi, we provide some product
-                        make by our villagers</p>
+                    <h1 class="text-white font-weight-bold">{{__("string.Products")}}</h1>
+                    <p class="caps text-white">{{__("string.Find original products from Kasepuhan sinar resmi, we provide some product make by our villagers")}}</p>
                 </div>
             </div>
         </div>
@@ -16,7 +15,7 @@
     <div class="divider"></div>
     <div class="container">
         <div class="text-center">
-            <h3 class="title">Looking for original Products?</h3>
+            <h3 class="title">{{__("string.Looking for original Products?")}}</h3>
         </div>
         <div class="product-list mt-5">
             <div class="row">

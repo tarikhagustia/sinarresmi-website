@@ -6,8 +6,8 @@
         <div class="container pb-4 pt-5">
             <div class="row">
                 <div class="col-sm-6 border p-4">
-                    <h1 class="text-white font-weight-bold">Contact Us</h1>
-                    <p class="caps text-white">Whenever you need us, we're here for you and your Information</p>
+                    <h1 class="text-white font-weight-bold">{{__("string.Contact Us")}}</h1>
+                    <p class="caps text-white">{{__("string.Whenever you need us, we're here for you and your Information")}}</p>
                 </div>
             </div>
         </div>
@@ -19,25 +19,25 @@
                 @if (session('success'))
                     <div class="alert alert-success">{{ session('success') }}</div>
                 @endif
-                <h3 class="text-center">Contact Us</h3>
+                <h3 class="text-center">{{__("string.Contact Us")}}</h3>
                 <form method="POST" action="{{ url('/contact-us') }}">
                     <div class="row justify-content-center">
 
                         @csrf
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label>Your Name</label>
+                                <label>{{__("string.Your Name")}}</label>
                                 <input name="name" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Your Email</label>
+                                <label>{{__("string.Your Email")}}</label>
                                 <input name="email" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Your Question</label>
+                                <label>{{__("string.Your Question")}}</label>
                                 <textarea name="question" class="form-control"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-success btn-block">Submit</button>
+                            <button type="submit" class="btn btn-success btn-block">{{__("string.Submit")}}</button>
                         </div>
 
                     </div>

@@ -34,42 +34,42 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <p class="font-weight-bold m-0 mb-2">About</p>
-                <p class="text-muted">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p class="font-weight-bold m-0 mb-2">{{__('string.About')}}</p>
+                <p class="text-muted">{{__('string.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.')}}</p>
             </div>
 
             <div class="col-sm-3">
-                <p class="font-weight-bold m-0 mb-2">Information</p>
+                <p class="font-weight-bold m-0 mb-2">{{__('string.Information')}}</p>
                 <ul class="text-muted list-group list-group-flush">
                     <li class="text-muted">
-                        <a href="#">Events</a>
+                        <a href="#">{{__('string.Events')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Articles</a>
+                        <a href="#">{{__('string.Articles')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Booking</a>
+                        <a href="#">{{__('string.Booking')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Contact Us</a>
+                        <a href="#">{{__('string.Contact Us')}}</a>
                     </li>
                 </ul>
             </div>
 
             <div class="col-sm-3">
-                <p class="font-weight-bold m-0 mb-2">On Geopark Ciletuh</p>
+                <p class="font-weight-bold m-0 mb-2">{{__('string.On Geopark Ciletuh')}}</p>
                 <ul class="text-muted list-group list-group-flush">
                     <li class="text-muted">
-                        <a href="#">Hotel</a>
+                        <a href="#">{{__('string.Hotel')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Restourant</a>
+                        <a href="#">{{__('string.Restaurant')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Nature</a>
+                        <a href="#">{{__('string.Nature')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Campaign</a>
+                        <a href="#">{{__('string.Campaign')}}</a>
                     </li>
                 </ul>
             </div>

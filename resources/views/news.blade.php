@@ -5,8 +5,8 @@
         <div class="container pb-4 pt-5">
             <div class="row">
                 <div class="col-sm-6 border p-4">
-                    <h1 class="text-white font-weight-bold">Kasepuhan News</h1>
-                    <p class="caps text-white">Even though it is a traditional village, Kasepuhan Sinar Official does not isolate itself from the times. In Kasepuhan, electricity is already available, and even the residents are used to using cell phones. Some of the residents' houses already use bricks and cement—although there are still some that only use wood and bamboo and palm fiber as the roof..</p>
+                    <h1 class="text-white font-weight-bold">{{__('string.Kasepuhan News')}}</h1>
+                    <p class="caps text-white">{{__("string.Even though it is a traditional village, Kasepuhan Sinar Official does not isolate itself from the times. In Kasepuhan, electricity is already available, and even the residents are used to using cell phones. Some of the residents' houses already use bricks and cement—although there are still some that only use wood and bamboo and palm fiber as the roof..")}}</p>
                 </div>
             </div>
         </div>

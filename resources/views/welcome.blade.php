@@ -33,9 +33,9 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
             <div class="col-md-7 ftco-animate fadeInUp ftco-animated hero">
-                <span class="subheading">Welcome to Kasepuhan Sinar Resmi</span>
-                <h1 class="mb-4">Discover cultural diversity in this place</h1>
-                <p class="caps">A landscape is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area</p>
+                <span class="subheading">{{__('string.Welcome to Kasepuhan Sinar Resmi')}}</span>
+                <h1 class="mb-4">{{__('string.Discover cultural diversity in this place')}}</h1>
+                <p class="caps">{{__('string.A landscape is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area')}}</p>
             </div>
 {{--            <a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">--}}
 {{--                <span class="fa fa-play"></span>--}}
@@ -62,71 +62,71 @@
             <div class="row no-gutters">
                 <div class="col-md-3 d-flex">
                     <div class="form-group p-4 border-1">
-                        <label for="#" class="font-weight-bold text-success">Visitor Name</label>
+                        <label for="#" class="font-weight-bold text-success">{{__('string.Visitor Name')}}</label>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="icon mr-3"><span class="far fa-user"></span></div>
-                            <input name="name" type="text" class="form-control form-control-sm form-booking" placeholder="Your team or Individual name">
+                            <input name="name" type="text" class="form-control form-control-sm form-booking" placeholder="{{__('string.Your team or Individual name')}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
                     <div class="form-group p-4">
-                        <label for="#" class="font-weight-bold text-success">Date In</label>
+                        <label for="#" class="font-weight-bold text-success">{{__('string.Date In')}}</label>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="icon mr-3"><span class="far fa-calendar"></span></div>
-                            <input name="date_in" type="date" class="form-control form-control-sm form-booking" placeholder="Visit Date">
+                            <input name="date_in" type="date" class="form-control form-control-sm form-booking" placeholder="{{__('string.Visit Date')}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
                     <div class="form-group p-4">
-                        <label for="#" class="font-weight-bold text-success">Date Out</label>
+                        <label for="#" class="font-weight-bold text-success">{{__('string.Date Out')}}</label>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="icon mr-3"><span class="far fa-calendar"></span></div>
-                            <input name="date_out" type="date" class="form-control form-control-sm form-booking" placeholder="Visit Date">
+                            <input name="date_out" type="date" class="form-control form-control-sm form-booking" placeholder="{{__('string.Visit Date')}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
                     <div class="form-group p-4">
-                        <label for="#" class="font-weight-bold text-success">Visitors</label>
+                        <label for="#" class="font-weight-bold text-success">{{__('string.Visitors')}}</label>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="icon mr-3"><span class="far fa-user"></span></div>
-                            <input name="visitors" type="number" class="form-control form-control-sm form-booking" placeholder="Visitors" min="1">
+                            <input name="visitors" type="number" class="form-control form-control-sm form-booking" placeholder="{{__('string.Visitors')}}" min="1">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
                     <div class="form-group p-4">
-                        <label for="#" class="font-weight-bold text-success">Email</label>
+                        <label for="#" class="font-weight-bold text-success">{{__('string.Email')}}</label>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="icon mr-3"><span class="fas fa-envelope"></span></div>
-                            <input name="email" type="text" class="form-control form-control-sm form-booking" placeholder="Email">
+                            <input name="email" type="text" class="form-control form-control-sm form-booking" placeholder="{{__('string.Email')}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
                     <div class="form-group p-4">
-                        <label for="#" class="font-weight-bold text-success">Phone</label>
+                        <label for="#" class="font-weight-bold text-success">{{__('string.Phone')}}</label>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="icon mr-3"><span class="fas fa-phone"></span></div>
-                            <input name="phone_number" type="text" class="form-control form-control-sm form-booking" placeholder="Phone">
+                            <input name="phone_number" type="text" class="form-control form-control-sm form-booking" placeholder="{{__('string.Phone')}}">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex">
                     <div class="form-group p-4">
-                        <label for="#" class="font-weight-bold text-success">Purpose</label>
+                        <label for="#" class="font-weight-bold text-success">{{__('string.Purpose')}}</label>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="icon mr-3"><span class="fas fa-check"></span></div>
-                            <input name="purpose" type="text" class="form-control form-control-sm form-booking" placeholder="Purpose" value="{{ request()->get('desc') }}">
+                            <input name="purpose" type="text" class="form-control form-control-sm form-booking" placeholder="{{__('string.Purpose')}}" value="{{ request()->get('desc') }}">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 d-flex p-4">
                     <div class="form-group d-flex w-100 border-0">
                         <div class="form-field w-100 align-items-center d-flex">
-                            <button type="submit" class="form-control rounded-0 btn btn-success btn-booking">Booking Now</button>
+                            <button type="submit" class="form-control rounded-0 btn btn-success btn-booking">{{__('string.Booking Now')}}</button>
                         </div>
                     </div>
                 </div>
@@ -140,12 +140,12 @@
             <img src="{{ asset('images/home-1.jpeg') }}" class="img-fluid">
         </div>
         <div class="col-sm-6">
-            <h3 class="title">Cultural Acculturation</h3>
+            <h3 class="title">{{__('string.Cultural Acculturation')}}</h3>
             <p class="text-muted">
-                Kasepuhan Adat Banten Kidul is a Sundanese indigenous people who live around Mount Halimun, precisely in Sirnaresmi Village, Cisolok District, Sukabumi Regency, West Java Province. The Kasepuhan Indigenous people of Banten Kidul believe that they are descended from the Sunda Kingdom which has existed since 500 years ago in Pakuan Pajajaran, namely in the 16th century AD. Based on this belief, it can be understood that the life of the Kasepuhan Indigenous people of Banten Kidul until now is based on the culture of the Sunda Wiwitan ancestors.
+                {{__('string.Cultural Acculturation 1')}}
             </p>
             <p  class="text-muted">
-                The Kasepuhan Sinar Official community still carries out the traditions of their ancestors in the agricultural sector. In this traditional village, from the process of planting rice to harvesting it is always accompanied by ceremonies related to agriculture. The most famous ceremony is the Seren Taun which is held to celebrate the rice harvest—and is usually crowded with tourists.
+                {{__('string.Cultural Acculturation 2')}}
             </p>
             {{-- <a href="{{ url('/events') }}" type="submit" class="rounded-0 btn btn-success btn-default-1">Upcoming Event</a> --}}
         </div>
@@ -153,8 +153,8 @@
 
     <div class="divider"></div>
     <div class="text-center">
-        <p class="text-muted m-0">Find beautiful place around Kasepuhan Sinar Resmi</p>
-        <h3 class="title">Popular Places Near Kasepuhan Sinar Resmi</h3>
+        <p class="text-muted m-0">{{__('string.Find beautiful place around Kasepuhan Sinar Resmi')}}</p>
+        <h3 class="title">{{__('string.Popular Places Near Kasepuhan Sinar Resmi')}}</h3>
     </div>
 </div>
 <div class="row mt-5 no-gutters">
@@ -166,7 +166,7 @@
 <div class="divider"></div>
 <div class="container">
     <div class="text-center">
-        <h3 class="title">Looking for original Products?</h3>
+        <h3 class="title">{{__('string.Looking for original Products?')}}</h3>
     </div>
     <div class="product-list mt-5">
         <div class="row">
@@ -190,48 +190,48 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <p class="font-weight-bold m-0 mb-2">About</p>
-                <p class="text-muted">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p class="font-weight-bold m-0 mb-2">{{__('string.About')}}</p>
+                <p class="text-muted">{{__('string.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.')}}</p>
             </div>
 
             <div class="col-sm-3">
-                <p class="font-weight-bold m-0 mb-2">Information</p>
+                <p class="font-weight-bold m-0 mb-2">{{__('string.Information')}}</p>
                 <ul class="text-muted list-group list-group-flush">
                     <li class="text-muted">
-                        <a href="#">Events</a>
+                        <a href="#">{{__('string.Events')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Articles</a>
+                        <a href="#">{{__('string.Articles')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Booking</a>
+                        <a href="#">{{__('string.Booking')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Contact Us</a>
+                        <a href="#">{{__('string.Contact Us')}}</a>
                     </li>
                 </ul>
             </div>
 
             <div class="col-sm-3">
-                <p class="font-weight-bold m-0 mb-2">On Geopark Ciletuh</p>
+                <p class="font-weight-bold m-0 mb-2">{{__('string.On Geopark Ciletuh')}}</p>
                 <ul class="text-muted list-group list-group-flush">
                     <li class="text-muted">
-                        <a href="#">Hotel</a>
+                        <a href="#">{{__('string.Hotel')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Restourant</a>
+                        <a href="#">{{__('string.Restaurant')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Nature</a>
+                        <a href="#">{{__('string.Nature')}}</a>
                     </li>
                     <li class="text-muted">
-                        <a href="#">Campaign</a>
+                        <a href="#">{{__('string.Campaign')}}</a>
                     </li>
                 </ul>
             </div>
 
             <div class="col-sm-3">
-                <p class="font-weight-bold m-0 mb-2">Have a Question?</p>
+                <p class="font-weight-bold m-0 mb-2">{{__('string.Have a Question?')}}</p>
                 <ul class="text-muted list-group list-group-flush">
                     <li class="text-muted">
                         Sirnaresmi, Cisolok, Sukabumi Regency, Jawa Barat 43366
