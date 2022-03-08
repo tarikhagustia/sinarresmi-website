@@ -17,7 +17,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light navbar-t" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ asset('images/logo.png') }}">
+            <img src="{{ asset('images/logo.png') }}" width="50" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -171,16 +171,16 @@
     <div class="product-list mt-5">
         <div class="row">
             @foreach (\App\Models\Product::all() as $product)
-                    <div class="col-sm-2">
-                        <div class="product-item mb-2">
-                            <img src="{{ Storage::url($product->image) }}" height="100">
-                            <div class="p-1">
-                                <p class="m-0 mb-2 small">{{ $product->name }}</p>
-                                <p class="m-0 font-weight-bold">Rp. {{ number_format($product->price) }}</p>
-                                <small class="m-0 text-sm text-muted">Tersedia {{ $product->stock }} Pcs</small>
-                            </div>
+                <div class="col-sm-2">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="{{ Storage::url($product->image) }}" height="100" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="m-0 mb-2 small">{{ $product->name }}</p>
+                            <p class="m-0 font-weight-bold">Rp. {{ number_format($product->price) }}</p>
+                            <small class="m-0 text-sm text-muted">Tersedia {{ $product->stock }} Pcs</small>
                         </div>
                     </div>
+                </div>
                 @endforeach
         </div>
     </div>
