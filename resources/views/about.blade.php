@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-sm-6 border p-4">
                     <h1 class="text-white font-weight-bold">{{__('string.About Us')}}</h1>
-                    <p class="caps text-white">{{__('string.Kasepuhan Sinar Official led by Abah Asep Nugraha is located in Cisolok District, and is a diversity of one of the traditional villages of Kasepuhan Banten Kidul which is still preserved. Kasepuhan Sinar Official is an integral part of the cultural aspect of the Ciletuh Geopark.')}}</p>
+                    <p class="caps text-white">{{__('string.Kasepuhan Sinar Resmi led by Traditional Leader is located in Cisolok District, and is a diversity of one of the traditional villages of Kasepuhan Banten Kidul which is still preserved. Kasepuhan Sinar Resmi is an integral part of the cultural aspect of the Ciletuh Geopark.')}}</p>
                 </div>
             </div>
         </div>

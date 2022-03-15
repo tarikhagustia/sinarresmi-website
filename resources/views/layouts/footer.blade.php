@@ -49,7 +49,7 @@
                 <p class="font-weight-bold m-0 mb-2">Have a Question?</p>
                 <ul class="text-muted list-group list-group-flush">
                     <li class="text-muted">
-                        Sirnaresmi, Cisolok, Sukabumi Regency, Jawa Barat 43366
+                        Sinarresmi, Cisolok, Sukabumi Regency, Jawa Barat 43366
                     </li>
                     <li class="text-muted">
                         0266 0212233

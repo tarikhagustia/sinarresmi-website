@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-sm-6 border p-4">
                     <h1 class="text-white font-weight-bold">{{__("string.Facility")}}</h1>
-                    <p class="caps text-white">{{__("string.The architecture in Kasepuhan Sinar Official still uses Sundanese architecture. This can be seen from the physical features of the Sundanese buildings in Kasepuhan Sinar Official. Apart from its physical form, the characteristic that has been applied until now is still maintained, namely the division of the building mass based on its function.")}}</p>
+                    <p class="caps text-white">{{__("string.The architecture in Kasepuhan Sinar Resmi still uses Sundanese architecture. This can be seen from the physical features of the Sundanese buildings in Kasepuhan Sinar Resmi. Apart from its physical form, the characteristic that has been applied until now is still maintained, namely the division of the building mass based on its function.")}}</p>
 
                 </div>
             </div>
