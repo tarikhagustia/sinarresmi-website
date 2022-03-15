@@ -43,7 +43,9 @@
                     <p class="text-muted">
                         {{ $f->short_desc }}
                     </p>
-                    <a href="{{ url('/facility/'.$f->slug) }}">See in 3D</a>
+                    @if($f->warehouse_url)
+                        <a href="{{ url('/facility/'.$f->slug) }}">See in 3D</a>
+                    @endif
                 </div>
             </div>
 

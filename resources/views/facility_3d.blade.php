@@ -7,8 +7,7 @@
             <div class="row">
                 <div class="col-sm-6 border p-4">
                     <h1 class="text-white font-weight-bold">{{ $facility->title }}</h1>
-                    <p class="caps text-white">{{ $facility->short_desc }}</p>
-                        
+                    <p class="caps text-white">{{ $facility->short_desc }}</p> 
                 </div>
             </div>
         </div>
@@ -16,7 +15,13 @@
     <div class="divider"></div>
     <div class="container">
         
-<iframe src="{{ $facility->warehouse_url }}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="500" allowfullscreen></iframe>
+        <iframe src="{{ $facility->warehouse_url }}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="500" allowfullscreen></iframe>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <p class="text-justify">{{ $facility->long_desc }}</p> 
+            </div>
+        </div>
 
     </div>
 @stop
