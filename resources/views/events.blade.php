@@ -13,6 +13,11 @@
     </div>
     <div class="divider"></div>
     <div class="container">
+        <div class="row my-5 text-center">
+            <div class="col">
+                <h3>{{__('string.Cultural Activities In Kasepuhan Sinar Resmi')}}</h3>
+            </div>
+        </div>
         <div class="row">
             {{-- Placeholder Event Card --}}
             {{-- <div class="col-sm-3">

@@ -64,7 +64,8 @@ return [
 
      // Events
     "Even though it is a traditional village, Kasepuhan Sinar Resmi does not isolate itself from the times. In Kasepuhan, electricity is already available, and even the residents are used to using cell phones. Some of the residents' houses already use bricks and cement—although there are still some that only use wood and bamboo and palm fiber as the roof.."=>"Meski merupakan desa adat, Pejabat Kasepuhan Sinar Resmi tidak mengasingkan diri dari perkembangan zaman. Di Kasepuhan, listrik sudah tersedia, bahkan warga sudah terbiasa menggunakan telepon seluler. Beberapa rumah warga sudah menggunakan batu bata dan semen—walaupun masih ada beberapa yang hanya menggunakan kayu dan bambu serta ijuk sebagai atapnya..",
-    
+    "Cultural Activities In Kasepuhan Sinar Resmi"=>"Kegiatan Budaya Di Kasepuhan Sinar Resmi",
+
     // News
     "Kasepuhan News"=>"Berita Kasepuhan",
 

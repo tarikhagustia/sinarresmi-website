@@ -64,6 +64,7 @@ return [
 
     // Events
     "Even though it is a traditional village, Kasepuhan Sinar Resmi does not isolate itself from the times. In Kasepuhan, electricity is already available, and even the residents are used to using cell phones. Some of the residents' houses already use bricks and cement—although there are still some that only use wood and bamboo and palm fiber as the roof.."=>"Even though it is a traditional village, Kasepuhan Sinar Resmi does not isolate itself from the times. In Kasepuhan, electricity is already available, and even the residents are used to using cell phones. Some of the residents' houses already use bricks and cement—although there are still some that only use wood and bamboo and palm fiber as the roof..",
+    "Cultural Activities In Kasepuhan Sinar Resmi"=>"Cultural Activities In Kasepuhan Sinar Resmi",
 
     // News
     "Kasepuhan News"=>"Kasepuhan News",
