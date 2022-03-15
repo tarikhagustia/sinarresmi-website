@@ -5,6 +5,7 @@
     <li class="nav-item my-auto {{Route::currentRouteName() == 'news.index' ? 'active' : ''}}"><a href="{{ route('news.index') }}" class="nav-link">{{__('string.News')}}</a></li>
     <li class="nav-item my-auto {{Route::currentRouteName() == 'facility.index' ? 'active' : ''}}"><a href="{{ route('facility.index') }}" class="nav-link">{{__('string.Facility')}}</a></li>
     <li class="nav-item my-auto {{Route::currentRouteName() == 'products.index' ? 'active' : ''}}"><a href="{{ route('products.index') }}" class="nav-link">{{__('string.Products')}}</a></li>
+    <li class="nav-item my-auto {{Route::currentRouteName() == 'gallery' ? 'active' : ''}}"><a href="{{ route('gallery') }}" class="nav-link">{{__('string.Gallery')}}</a></li>
     <li class="nav-item my-auto {{Route::currentRouteName() == 'contact-us' ? 'active' : ''}}"><a href="{{ route('contact-us') }}" class="nav-link">{{__('string.Contact')}}</a></li>
     <li class="nav-item my-auto mt-3">
         <a href="{{ LaravelLocalization::getLocalizedURL('id') }}">

@@ -90,4 +90,7 @@ return [
     "Your Email"=>"Your Email",
     "Your Question"=>"Your Question",
     "Submit"=>"Submit",
+
+    // Gallery
+    "Gallery"=>"Gallery",
 ];
