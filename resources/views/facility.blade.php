@@ -19,22 +19,12 @@
             
             <div class="row align-items-center mb-5 {{ !$loop->odd ? 'flex-row-reverse' : null }}">
                 <div class="col-sm-7 p-5">
-                    <div id="carousel-{{$f->slug}}" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                             @foreach ($f->images as $k => $img)
-                                <div class="carousel-item {{$k==0?'active':''}}">
-                                    <img class="d-block w-100" src="{{ asset($img) }}" alt="{{$f->slug}}">
-                                </div>
-                             @endforeach
+                    <div class="owl-carousel owl-theme">
+                        @foreach ($f->images as $k => $img)
+                        <div class="">
+                            <img class="d-block w-100" src="{{ asset($img) }}" alt="{{$f->slug}}">
                         </div>
-                        <a class="carousel-control-prev" href="#carousel-{{$f->slug}}" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carousel-{{$f->slug}}" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                        @endforeach
                     </div>
                 </div>
 
@@ -65,5 +55,13 @@
             effect: "cards",
             grabCursor: true,
         });
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            items:1,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true
+        })
     </script>
 @endpush
