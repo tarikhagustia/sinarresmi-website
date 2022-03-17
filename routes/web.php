@@ -1,20 +1,22 @@
 <?php
 
-use App\Http\Controllers\Dashboard\DashboardController;
-use App\Http\Controllers\Dashboard\BookingResourceController;
-use App\Http\Controllers\Dashboard\EventResourceController;
-use App\Http\Controllers\Dashboard\ProductResourceController;
-use App\Http\Controllers\Dashboard\SerialNumberResourceController;
-use App\Http\Controllers\Dashboard\UserResourceController;
-use App\Http\Controllers\Dashboard\ProductSerialResourceController;
+use App\Repository\GalleryRepository;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\Dashboard\NewsResourceController;
-use App\Http\Controllers\EventController;
-use App\Http\Controllers\FacilityController;
-use App\Http\Controllers\NewsController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProductController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\NewsResourceController;
+use App\Http\Controllers\Dashboard\UserResourceController;
+use App\Http\Controllers\Dashboard\EventResourceController;
+use App\Http\Controllers\Dashboard\BookingResourceController;
+use App\Http\Controllers\Dashboard\ProductResourceController;
+use App\Http\Controllers\Dashboard\SerialNumberResourceController;
+use App\Http\Controllers\Dashboard\ProductSerialResourceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +39,7 @@ Route::group(
         return view('welcome');
     })->name('home');
 
-    Route::get('/gallery', function () {
-        return view('gallery');
-    })->name('gallery');
+    Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 
     Route::get('/about-us', function () {
         return view('about');

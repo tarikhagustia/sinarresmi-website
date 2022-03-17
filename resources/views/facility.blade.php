@@ -21,9 +21,9 @@
                 <div class="col-sm-7 p-5">
                     <div class="owl-carousel owl-theme">
                         @foreach ($f->images as $k => $img)
-                        <div class="">
+                        <a href="{{ asset($img) }}" data-lightbox="{{$f->slug}}">
                             <img class="d-block w-100" src="{{ asset($img) }}" alt="{{$f->slug}}">
-                        </div>
+                        </a>
                         @endforeach
                     </div>
                 </div>

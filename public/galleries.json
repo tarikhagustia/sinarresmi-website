@@ -1,0 +1,114 @@
+[
+    {
+        "title":"Imah Gede Lt 1",
+        "images":[
+            "images/galeri/imah-gede/lt-1/1.jpeg",
+            "images/galeri/imah-gede/lt-1/2.jpeg",
+            "images/galeri/imah-gede/lt-1/3.jpeg",
+            "images/galeri/imah-gede/lt-1/4.jpeg",
+            "images/galeri/imah-gede/lt-1/5.jpeg",
+            "images/galeri/imah-gede/lt-1/6.jpeg",
+            "images/galeri/imah-gede/lt-1/7.jpeg",
+            "images/galeri/imah-gede/lt-1/8.jpeg",
+            "images/galeri/imah-gede/lt-1/9.jpeg",
+            "images/galeri/imah-gede/lt-1/10.jpeg",
+            "images/galeri/imah-gede/lt-1/11.jpeg",
+            "images/galeri/imah-gede/lt-1/12.jpeg"
+        ]
+    },
+    {
+        "title":"Imah Gede Lt 2",
+        "images":[
+            "images/galeri/imah-gede/lt-2/1.jpeg",
+            "images/galeri/imah-gede/lt-2/2.jpeg",
+            "images/galeri/imah-gede/lt-2/3.jpeg",
+            "images/galeri/imah-gede/lt-2/4.jpeg",
+            "images/galeri/imah-gede/lt-2/5.jpeg",
+            "images/galeri/imah-gede/lt-2/6.jpeg",
+            "images/galeri/imah-gede/lt-2/7.jpeg",
+            "images/galeri/imah-gede/lt-2/8.jpeg",
+            "images/galeri/imah-gede/lt-2/9.jpeg",
+            "images/galeri/imah-gede/lt-2/10.jpeg",
+            "images/galeri/imah-gede/lt-2/11.jpeg",
+            "images/galeri/imah-gede/lt-2/12.jpeg",
+            "images/galeri/imah-gede/lt-2/13.jpeg",
+            "images/galeri/imah-gede/lt-2/14.jpeg",
+            "images/galeri/imah-gede/lt-2/15.jpeg",
+            "images/galeri/imah-gede/lt-2/16.jpeg"
+        ]
+    },
+    {
+        "title":"Pesanggrahan",
+        "images":[
+            "images/galeri/pesanggrahan/1.jpeg",
+            "images/galeri/pesanggrahan/2.jpeg",
+            "images/galeri/pesanggrahan/3.jpeg",
+            "images/galeri/pesanggrahan/4.jpeg",
+            "images/galeri/pesanggrahan/5.jpeg",
+            "images/galeri/pesanggrahan/6.jpeg",
+            "images/galeri/pesanggrahan/7.jpeg",
+            "images/galeri/pesanggrahan/8.jpeg",
+            "images/galeri/pesanggrahan/9.jpeg",
+            "images/galeri/pesanggrahan/10.jpeg",
+            "images/galeri/pesanggrahan/11.jpeg",
+            "images/galeri/pesanggrahan/12.jpeg",
+            "images/galeri/pesanggrahan/13.jpeg"
+        ]
+    },
+    {
+        "title":"Leuit Binih",
+        "images":[
+            "images/galeri/leuit/leuit-binih/1.jpeg",
+            "images/galeri/leuit/leuit-binih/2.jpeg",
+            "images/galeri/leuit/leuit-binih/3.jpeg",
+            "images/galeri/leuit/leuit-binih/4.jpeg",
+            "images/galeri/leuit/leuit-binih/5.jpeg",
+            "images/galeri/leuit/leuit-binih/6.jpeg",
+            "images/galeri/leuit/leuit-binih/7.jpeg"
+        ]
+    },
+    {
+        "title":"Leuit Si Jimat",
+        "images":[
+            "images/galeri/leuit/leuit-si-jimat/1.jpeg",
+            "images/galeri/leuit/leuit-si-jimat/2.jpeg"
+        ]
+    },
+    {
+        "title":"Foto Kamar",
+        "images":[
+            "images/galeri/foto-kamar/cere-gelas/1.jpeg",
+            "images/galeri/foto-kamar/cere-gelas/2.jpeg",
+
+            "images/galeri/foto-kamar/cere-kawat/1.jpeg",
+            "images/galeri/foto-kamar/cere-kawat/2.jpeg",
+
+            "images/galeri/foto-kamar/cere-layung/1.jpeg",
+            "images/galeri/foto-kamar/cere-layung/2.jpeg",
+
+            "images/galeri/foto-kamar/cere-marilen/1.jpeg",
+            "images/galeri/foto-kamar/cere-marilen/2.jpeg",
+
+            "images/galeri/foto-kamar/cere-sebri/1.jpeg",
+            "images/galeri/foto-kamar/cere-sebri/2.jpeg",
+
+            "images/galeri/foto-kamar/gadog/1.jpeg",
+            "images/galeri/foto-kamar/gadog/2.jpeg",
+
+            "images/galeri/foto-kamar/ketan-cikur/1.jpeg",
+            "images/galeri/foto-kamar/ketan-cikur/2.jpeg",
+
+            "images/galeri/foto-kamar/ketan-lepo/1.jpeg",
+            "images/galeri/foto-kamar/ketan-lepo/2.jpeg",
+
+            "images/galeri/foto-kamar/raja-wesi/1.jpeg",
+            "images/galeri/foto-kamar/raja-wesi/2.jpeg",
+
+            "images/galeri/foto-kamar/sari-mahi/1.jpeg",
+            "images/galeri/foto-kamar/sari-mahi/2.jpeg",
+
+            "images/galeri/foto-kamar/sri-kuning/1.jpeg",
+            "images/galeri/foto-kamar/sri-kuning/2.jpeg"
+        ]
+    }
+]
