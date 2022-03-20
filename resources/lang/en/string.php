@@ -23,7 +23,6 @@ return [
     "Nature"=>"Nature",
     "Campaign"=>"Campaign",
     "Contact Us"=>"Contact Us",
-    "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."=>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
     "This website contains information on Kasepuhan Sinar Resmi such as cultural, social, and geological diversity"=>"This website contains information on Kasepuhan Sinar Resmi such as cultural, social, and geological diversity",
 
     // Homepage
@@ -93,4 +92,5 @@ return [
 
     // Gallery
     "Gallery"=>"Gallery",
+    "Kumpulan berbagai gambar - gambar fasilitas atau tempat yang terdapat di Kasepuhan Sinar Resmi"=>"A collection of various pictures of facilities or places found in Kasepuhan Sinar Resmi"
 ];

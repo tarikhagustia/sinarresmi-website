@@ -7,6 +7,7 @@
             <div class="row">
                 <div class="col-sm-6 border p-4">
                     <h1 class="text-white font-weight-bold">{{__("string.Gallery")}}</h1>
+                    <p class="caps text-white">{{__('string.Kumpulan berbagai gambar - gambar fasilitas atau tempat yang terdapat di Kasepuhan Sinar Resmi')}}</p>
                 </div>
             </div>
         </div>

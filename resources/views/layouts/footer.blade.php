@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <p class="font-weight-bold m-0 mb-2">{{__('string.About')}}</p>
-                <p class="text-muted">{{__('string.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.')}}</p>
+                <p class="text-muted">{{__('string.This website contains information on Kasepuhan Sinar Resmi such as cultural, social, and geological diversity')}}</p>
             </div>
 
             <div class="col-sm-4">
