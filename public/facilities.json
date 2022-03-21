@@ -1,9 +1,9 @@
 [
     {
-        "title": "Imah Gede",
+        "title": "Imah Gede (Rumah tinggal ketua adat)",
         "slug": "imah-gede",
-        "short_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "long_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "short_desc": "Sebelum Kasepuhan Sinar Resmi terbuka bagi masyarakat umum, Imah Gede merupakan tempat tinggal bagi ketua adat dan keluarganya. Tata ruang Imah Gede umumnya terdiri atas kamar tidur Ketua Adat, kamar tidur anak, ruang pertemuan antara ketua Adat dengan warga, ruang tahta ketua Adat, kamar mandi, dan dapur.",
+        "long_desc": "Sebelum Kasepuhan Sinar Resmi terbuka bagi masyarakat umum, Imah Gede merupakan tempat tinggal bagi ketua adat dan keluarganya. Tata ruang Imah Gede umumnya terdiri atas kamar tidur Ketua Adat, kamar tidur anak, ruang pertemuan antara ketua Adat dengan warga, ruang tahta ketua Adat, kamar mandi, dan dapur.Namun sejak Kasepuhan Sinar Resmi terbuka untuk wisatawan, tata ruangnya mengalami perubahan. Perubahan terjadi dengan disediakannya kamar tidur untuk wisatawan. Pada tahun 2018, Imah Gede mengalami renovasi sehingga bangunan memiliki penambahan kamar tidur bagi wisatawan dari 4 kamar tidur untuk wisatawan menjadi 12 kamar tidur untuk wisatawan. Untuk memudahkan wisatawan, di Imah Gede terdapat kamar mandi baik yang berada di lantai 1 maupun yang berada di lantai 2.",
         "images":[
             "images/imah-gede/imah_gede_0.png",
             "images/imah-gede/imah_gede_1.png",
@@ -13,36 +13,22 @@
     },
 
     {
-        "title": "Leuit si Jimat",
-        "slug": "leuit-si-jimat",
-        "short_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "long_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "title": "Leuit (Lumbung padi)",
+        "slug": "leuit",
+        "short_desc": "Leuit adalah bangunan untuk menyimpan hasil panen yakni padi. Kasepuhan Sinar Resmi memiliki bermacam-macam bentuk Leuit yakni leuit sijimat, leuit ketua adat, dan leuit warga. Beragam bentuk ini didasarkan pada kapasitas ruang untuk menyimpan padi, dan kemampuan untuk membangun leuit.",
+        "long_desc": "Leuit adalah bangunan untuk menyimpan hasil panen yakni padi. Kasepuhan Sinar Resmi memiliki bermacam-macam bentuk Leuit yakni leuit sijimat, leuit ketua adat, dan leuit warga. Beragam bentuk ini didasarkan pada kapasitas ruang untuk menyimpan padi, dan kemampuan untuk membangun leuit.  Leuit sijimat merupakan bentuk leuit yang paling besar ukurannya di Kasepuhan Sinar Resmi. Leuit sijimat merupakan bangunan penyimpanan padi secara komunal. Setiap kepala keluarga di Kasepuhan Sinar Resmi menyimpan 1 ikat padi di leuit sijimat. Dengan adanya sistim penyimpanan yang bersifat komunal maka ukuran leuit sijimat tentunya harus dapat menampung 1 ikat padi dari tiap kepala keluarga. Leuit ketua adat merupakan ukuran terbesar berikutnya setelah leuit sijimat. Ketua adat memiliki 7 buah leuit. Sedangkan untuk leuit warga merupakan leuit yang dimiliki tiap kepala keluarga. Banyaknya jumlah leuit dan ukuran leuit dibuat berdasarkan kemampuan ekonomi dari masing-masing warga.",
         "images":[
             "images/leuit-si-jimat/liet_1.png",
-            "images/leuit-si-jimat/liet_2.png",
+            "images/leuit-binih/liet_2.png",
             "images/leuit-si-jimat/liet_3.png"
         ],
         "warehouse_url": "https://3dwarehouse.sketchup.com/embed/05a2cb12-e003-485a-b9dc-85ae042fb4b6"
     },
-
     {
-        "title": "Leuit si Binih",
-        "slug": "leuit-si-binih",
-        "short_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "long_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "images":[
-            "images/leuit-binih/liet_1.png",
-            "images/leuit-binih/liet_2.png",
-            "images/leuit-binih/liet_3.png"
-        ],
-        "warehouse_url": "https://3dwarehouse.sketchup.com/embed/a5c68ab4-ce42-4a22-8a42-26c12e5c1003"
-    },
-
-    {
-        "title": "Pasanggrahan",
+        "title": "Pasanggrahan (Menampung tamu)",
         "slug": "pasanggrahan",
-        "short_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "long_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "short_desc": "Pasanggrahan merupakan bangunan baru yang dibangun pada tahun 2013 atas bantuan donatur. Bangunan ini merupakan bangunan tambahan yang saat ini digunakan sebagai tempat penginapan bagi wisatawan yang datang berkunjung ke Kasepuhan Sinar Resmi.",
+        "long_desc": "Pasanggrahan merupakan bangunan baru yang dibangun pada tahun 2013 atas bantuan donatur. Bangunan ini merupakan bangunan tambahan yang saat ini digunakan sebagai tempat penginapan bagi wisatawan yang datang berkunjung ke Kasepuhan Sinar Resmi. Bangunan ini memiliki kamar tidur, ruang makan, dapur, dan kamar mandi.",
         "images":[
             "images/pasanggrahan/pasanggrahan_1.png",
             "images/pasanggrahan/pasanggrahan_2.png",
@@ -54,8 +40,8 @@
     {
         "title": "Penginapan",
         "slug": "penginapan",
-        "short_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "long_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "short_desc": "Tiap kamar tidur wisatawan memiliki nama yang berbeda. Nama-nama tersebut diambil dari ragam jenis padi yang dihasilkan di Kasepuhan Sinar Resmi. Nama-nama tersebut yakni Sri Mahi, Ketan Lepo, Ketan Cikur, Gantang Hideung, Gadog, Sri Kuning, Cere Merilen, Cere Layung, Cere Gelas, Cere Kawat, Cere Segri, dan Raja Wesi.",
+        "long_desc": "Tiap kamar tidur wisatawan memiliki nama yang berbeda. Nama-nama tersebut diambil dari ragam jenis padi yang dihasilkan di Kasepuhan Sinar Resmi. Nama-nama tersebut yakni Sri Mahi, Ketan Lepo, Ketan Cikur, Gantang Hideung, Gadog, Sri Kuning, Cere Merilen, Cere Layung, Cere Gelas, Cere Kawat, Cere Segri, dan Raja Wesi.",
         "images":[
             "images/penginapan/2.jpeg",
             "images/penginapan/3.jpeg",
