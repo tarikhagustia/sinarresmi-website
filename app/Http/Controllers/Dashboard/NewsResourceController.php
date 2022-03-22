@@ -95,6 +95,7 @@ class NewsResourceController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'required',
             'content' => 'required',
+            'content_en' => 'required',
             'image' => 'image|file',
         ]);
 

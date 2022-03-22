@@ -41,11 +41,25 @@
                     <span class="text-gray-700 dark:text-gray-400">
                         Content
                     </span>
-                    <textarea id="summernote" name="content" type="text" value="{{ old('content', $news->content) }}"
-                        class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+                    <textarea name="content" type="text" value="{{ old('content', $news->content) }}"
+                        class=summernote block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
                         placeholder="Description">{{ old('content', $news->content) }}</textarea>
                     <span class="text-xs text-gray-600 dark:text-gray-400">
                         @error('content')
+                            {{ $message }}
+                        @enderror
+                    </span>
+                </label>
+
+                <label class="block mb-4 text-sm">
+                    <span class="text-gray-700 dark:text-gray-400">
+                        Content En
+                    </span>
+                    <textarea id="" name="content_en" type="text" value="{{ old('content_en', $news->content_en) }}"
+                        class="summernote block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+                        placeholder="Description">{{ old('content_en', $news->content_en) }}</textarea>
+                    <span class="text-xs text-gray-600 dark:text-gray-400">
+                        @error('content_en')
                             {{ $message }}
                         @enderror
                     </span>
@@ -82,7 +96,7 @@
 
         <script>
             $(document).ready(function() {
-                $('#summernote').summernote();
+                $('.summernote').summernote();
             });
         </script>
     @endpush

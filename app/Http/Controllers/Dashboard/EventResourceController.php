@@ -94,6 +94,7 @@ class EventResourceController extends Controller
             'title' => 'required|string|max:255',
             'status' => 'required|string',
             'description' => 'required|string',
+            'description_en' => 'required|string',
             'date_start' => 'required|date',
             'date_end' => 'required|date|after_or_equal:date_start',
             'image' => 'nullable|image|file',
