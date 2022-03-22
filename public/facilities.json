@@ -2,7 +2,8 @@
     {
         "title": "Imah Gede (Rumah tinggal ketua adat)",
         "slug": "imah-gede",
-        "short_desc": "Sebelum Kasepuhan Sinar Resmi terbuka bagi masyarakat umum, Imah Gede merupakan tempat tinggal bagi ketua adat dan keluarganya. Tata ruang Imah Gede umumnya terdiri atas kamar tidur Ketua Adat, kamar tidur anak, ruang pertemuan antara ketua Adat dengan warga, ruang tahta ketua Adat, kamar mandi, dan dapur.",
+        "short_desc": "Before Kasepuhan Sinar Resmi was officially open to the general public, Imah Gede was the residence for traditional leaders and their families. The layout of Imah Gede generally consists of the traditional chairman's bedroom, the children's bedroom, the meeting room between the adat leader and residents, the adat leader's throne room, bathroom, and kitchen.",
+        "short_desc_id": "Sebelum Kasepuhan Sinar Resmi terbuka bagi masyarakat umum, Imah Gede merupakan tempat tinggal bagi ketua adat dan keluarganya. Tata ruang Imah Gede umumnya terdiri atas kamar tidur Ketua Adat, kamar tidur anak, ruang pertemuan antara ketua Adat dengan warga, ruang tahta ketua Adat, kamar mandi, dan dapur.",
         "long_desc": "Sebelum Kasepuhan Sinar Resmi terbuka bagi masyarakat umum, Imah Gede merupakan tempat tinggal bagi ketua adat dan keluarganya. Tata ruang Imah Gede umumnya terdiri atas kamar tidur Ketua Adat, kamar tidur anak, ruang pertemuan antara ketua Adat dengan warga, ruang tahta ketua Adat, kamar mandi, dan dapur.Namun sejak Kasepuhan Sinar Resmi terbuka untuk wisatawan, tata ruangnya mengalami perubahan. Perubahan terjadi dengan disediakannya kamar tidur untuk wisatawan. Pada tahun 2018, Imah Gede mengalami renovasi sehingga bangunan memiliki penambahan kamar tidur bagi wisatawan dari 4 kamar tidur untuk wisatawan menjadi 12 kamar tidur untuk wisatawan. Untuk memudahkan wisatawan, di Imah Gede terdapat kamar mandi baik yang berada di lantai 1 maupun yang berada di lantai 2.",
         "images":[
             "images/imah-gede/imah_gede_0.png",
@@ -15,7 +16,8 @@
     {
         "title": "Leuit (Lumbung padi)",
         "slug": "leuit",
-        "short_desc": "Leuit adalah bangunan untuk menyimpan hasil panen yakni padi. Kasepuhan Sinar Resmi memiliki bermacam-macam bentuk Leuit yakni leuit sijimat, leuit ketua adat, dan leuit warga. Beragam bentuk ini didasarkan pada kapasitas ruang untuk menyimpan padi, dan kemampuan untuk membangun leuit.",
+        "short_desc": "Leuit is a building to store crops, namely rice. Kasepuhan Sinar Resmi has various forms of Leuit, namely leuit sijimat, leuit for traditional leaders, and leuit for residents. These various forms are based on the capacity of space to store rice, and the ability to build leuit.",
+        "short_desc_id": "Leuit adalah bangunan untuk menyimpan hasil panen yakni padi. Kasepuhan Sinar Resmi memiliki bermacam-macam bentuk Leuit yakni leuit sijimat, leuit ketua adat, dan leuit warga. Beragam bentuk ini didasarkan pada kapasitas ruang untuk menyimpan padi, dan kemampuan untuk membangun leuit.",
         "long_desc": "Leuit adalah bangunan untuk menyimpan hasil panen yakni padi. Kasepuhan Sinar Resmi memiliki bermacam-macam bentuk Leuit yakni leuit sijimat, leuit ketua adat, dan leuit warga. Beragam bentuk ini didasarkan pada kapasitas ruang untuk menyimpan padi, dan kemampuan untuk membangun leuit.  Leuit sijimat merupakan bentuk leuit yang paling besar ukurannya di Kasepuhan Sinar Resmi. Leuit sijimat merupakan bangunan penyimpanan padi secara komunal. Setiap kepala keluarga di Kasepuhan Sinar Resmi menyimpan 1 ikat padi di leuit sijimat. Dengan adanya sistim penyimpanan yang bersifat komunal maka ukuran leuit sijimat tentunya harus dapat menampung 1 ikat padi dari tiap kepala keluarga. Leuit ketua adat merupakan ukuran terbesar berikutnya setelah leuit sijimat. Ketua adat memiliki 7 buah leuit. Sedangkan untuk leuit warga merupakan leuit yang dimiliki tiap kepala keluarga. Banyaknya jumlah leuit dan ukuran leuit dibuat berdasarkan kemampuan ekonomi dari masing-masing warga.",
         "images":[
             "images/leuit-si-jimat/liet_1.png",
@@ -27,7 +29,8 @@
     {
         "title": "Pasanggrahan (Menampung tamu)",
         "slug": "pasanggrahan",
-        "short_desc": "Pasanggrahan merupakan bangunan baru yang dibangun pada tahun 2013 atas bantuan donatur. Bangunan ini merupakan bangunan tambahan yang saat ini digunakan sebagai tempat penginapan bagi wisatawan yang datang berkunjung ke Kasepuhan Sinar Resmi.",
+        "short_desc": "Pasanggrahan is a new building that was built in 2013 with the help of donors. This building is an additional building that is currently used as a place of lodging for tourists who come to visit Kasepuhan Sinar Resmi.",
+        "short_desc_id": "Pasanggrahan merupakan bangunan baru yang dibangun pada tahun 2013 atas bantuan donatur. Bangunan ini merupakan bangunan tambahan yang saat ini digunakan sebagai tempat penginapan bagi wisatawan yang datang berkunjung ke Kasepuhan Sinar Resmi.",
         "long_desc": "Pasanggrahan merupakan bangunan baru yang dibangun pada tahun 2013 atas bantuan donatur. Bangunan ini merupakan bangunan tambahan yang saat ini digunakan sebagai tempat penginapan bagi wisatawan yang datang berkunjung ke Kasepuhan Sinar Resmi. Bangunan ini memiliki kamar tidur, ruang makan, dapur, dan kamar mandi.",
         "images":[
             "images/pasanggrahan/pasanggrahan_1.png",
@@ -40,7 +43,8 @@
     {
         "title": "Penginapan",
         "slug": "penginapan",
-        "short_desc": "Tiap kamar tidur wisatawan memiliki nama yang berbeda. Nama-nama tersebut diambil dari ragam jenis padi yang dihasilkan di Kasepuhan Sinar Resmi. Nama-nama tersebut yakni Sri Mahi, Ketan Lepo, Ketan Cikur, Gantang Hideung, Gadog, Sri Kuning, Cere Merilen, Cere Layung, Cere Gelas, Cere Kawat, Cere Segri, dan Raja Wesi.",
+        "short_desc": "Each tourist bedroom has a different name. The names are taken from the various types of rice produced in Kasepuhan Sinar Resmi. The names are Sri Mahi, Ketan Lepo, Ketan Cikur, Gantang Hideung, Gadog, Sri Kuning, Cere Merilen, Cere Layung, Cere Glass, Cere Wire, Cere Segri, and Raja Wesi.",
+        "short_desc_id": "Tiap kamar tidur wisatawan memiliki nama yang berbeda. Nama-nama tersebut diambil dari ragam jenis padi yang dihasilkan di Kasepuhan Sinar Resmi. Nama-nama tersebut yakni Sri Mahi, Ketan Lepo, Ketan Cikur, Gantang Hideung, Gadog, Sri Kuning, Cere Merilen, Cere Layung, Cere Gelas, Cere Kawat, Cere Segri, dan Raja Wesi.",
         "long_desc": "Tiap kamar tidur wisatawan memiliki nama yang berbeda. Nama-nama tersebut diambil dari ragam jenis padi yang dihasilkan di Kasepuhan Sinar Resmi. Nama-nama tersebut yakni Sri Mahi, Ketan Lepo, Ketan Cikur, Gantang Hideung, Gadog, Sri Kuning, Cere Merilen, Cere Layung, Cere Gelas, Cere Kawat, Cere Segri, dan Raja Wesi.",
         "images":[
             "images/penginapan/2.jpeg",

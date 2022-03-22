@@ -92,5 +92,7 @@ return [
 
     // Gallery
     "Gallery"=>"Gallery",
-    "Kumpulan berbagai gambar - gambar fasilitas atau tempat yang terdapat di Kasepuhan Sinar Resmi"=>"A collection of various pictures of facilities or places found in Kasepuhan Sinar Resmi"
+    "Kumpulan berbagai gambar - gambar fasilitas atau tempat yang terdapat di Kasepuhan Sinar Resmi"=>"A collection of various pictures of facilities or places found in Kasepuhan Sinar Resmi",
+
+    "available" => "Available"
 ];

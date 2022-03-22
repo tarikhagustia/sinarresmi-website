@@ -16,7 +16,6 @@
     <div class="divider"></div>
     <div class="container">
         @foreach ($facilities as $f)
-            
             <div class="row align-items-center mb-5 {{ !$loop->odd ? 'flex-row-reverse' : null }}">
                 <div class="col-sm-7 p-5">
                     <div class="owl-carousel owl-theme">
@@ -30,9 +29,16 @@
 
                 <div class="col-sm-5">
                     <h3>{{ $f->title }}</h3>
-                    <p class="text-muted">
-                        {{ $f->short_desc }}
-                    </p>
+                    @if (LaravelLocalization::getCurrentLocale() == "en")
+                        <p class="text-muted">
+                            {{ $f->short_desc }}
+                        </p>
+                    @else 
+                        <p class="text-muted">
+                            {{ $f->short_desc_id }}
+                        </p>   
+                    @endif
+                    
                     @if($f->warehouse_url)
                         <a href="{{ url('/facility/'.$f->slug) }}">See in 3D</a>
                     @endif

@@ -178,7 +178,7 @@
                         <div class="card-body">
                             <p class="m-0 mb-2 small">{{ $product->name }}</p>
                             <p class="m-0 font-weight-bold">Rp. {{ number_format($product->price) }}</p>
-                            <small class="m-0 text-sm text-muted">Tersedia {{ $product->stock }} Pcs</small>
+                            <small class="m-0 text-sm text-muted">{{ __('string.available')}} {{ $product->stock }} Pcs</small>
                         </div>
                     </div>
                 </div>
