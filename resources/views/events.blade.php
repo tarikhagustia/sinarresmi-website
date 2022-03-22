@@ -1,12 +1,15 @@
 @extends('layouts.master')
 
 @section('content')
-    <div style="background: url({{ asset('images/hero-bg-2.png') }}) rgba(0, 0, 0, 0.5);background-blend-mode: multiply;  background-repeat: no-repeat; background-size: cover">
+    <div
+        style="background: url({{ asset('images/hero-bg-2.png') }}) rgba(0, 0, 0, 0.5);background-blend-mode: multiply;  background-repeat: no-repeat; background-size: cover">
         <div class="container py-5">
             <div class="row">
                 <div class="col-sm-6 border p-4">
-                    <h1 class="text-white font-weight-bold">{{__('string.Cultural Activities')}}</h1>
-                    <p class="caps text-white">{{__("string.Even though it is a traditional village, Kasepuhan Sinar Resmi does not isolate itself from the times. In Kasepuhan, electricity is already available, and even the residents are used to using cell phones. Some of the residents' houses already use bricks and cement—although there are still some that only use wood and bamboo and palm fiber as the roof..")}}</p>
+                    <h1 class="text-white font-weight-bold">{{ __('string.Cultural Activities') }}</h1>
+                    <p class="caps text-white">
+                        {{ __("string.Even though it is a traditional village, Kasepuhan Sinar Resmi does not isolate itself from the times. In Kasepuhan, electricity is already available, and even the residents are used to using cell phones. Some of the residents' houses already use bricks and cement—although there are still some that only use wood and bamboo and palm fiber as the roof..") }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -15,7 +18,7 @@
     <div class="container">
         <div class="row my-5 text-center">
             <div class="col">
-                <h3>{{__('string.Cultural Activities In Kasepuhan Sinar Resmi')}}</h3>
+                <h3>{{ __('string.Cultural Activities In Kasepuhan Sinar Resmi') }}</h3>
             </div>
         </div>
         <div class="row">
@@ -33,14 +36,20 @@
             @foreach ($events as $event)
                 <div class="col-sm-3">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset('storage/'.$event->image) }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('storage/' . $event->image) }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{ $event->title }}</h5>
                             <p class="small text-muted m-0">{{ $event->date_start }} to {{ $event->date_end }}</p>
-                            <p class="card-subtitle text-muted">{{ Str::limit($event->description, 100, '...') }}</p>
+                            @if (LaravelLocalization::getCurrentLocale() == 'en')
+                                <p class="card-subtitle text-muted">{{ Str::limit($event->description_en, 100, '...') }}</p>
+                            @else
+                                <p class="card-subtitle text-muted">{{ Str::limit($event->description, 100, '...') }}</p>
+                            @endif
+
                             <p class="card-subtitle badge badge-primary text-white">{{ $event->status }}</p>
                             <br>
-                            <a href="{{ url('/?desc=I want to join '.$event->title) }}" class="btn btn-primary mt-2">Register</a>
+                            <a href="{{ url('/?desc=I want to join ' . $event->title) }}"
+                                class="btn btn-primary mt-2">Register</a>
                         </div>
                     </div>
                 </div>

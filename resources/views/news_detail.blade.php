@@ -17,6 +17,11 @@
             <img src="{{ Storage::url($news->image) }}" class="img-fluid" style="max-height: 400px">
         </div>
         
+        @if (LaravelLocalization::getCurrentLocale() == 'en')
+        {!! $news->content_en !!}
+        @else
         {!! $news->content !!}
+        @endif
+        
     </div>
 @endsection
