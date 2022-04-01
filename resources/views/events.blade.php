@@ -8,7 +8,7 @@
                 <div class="col-sm-6 border p-4">
                     <h1 class="text-white font-weight-bold">{{ __('string.Cultural Activities') }}</h1>
                     <p class="caps text-white">
-                        {{ __("string.Even though it is a traditional village, Kasepuhan Sinar Resmi does not isolate itself from the times. In Kasepuhan, electricity is already available, and even the residents are used to using cell phones. Some of the residents' houses already use bricks and cement—although there are still some that only use wood and bamboo and palm fiber as the roof..") }}
+                        {{ __("string.Events Description") }}
                     </p>
                 </div>
             </div>
