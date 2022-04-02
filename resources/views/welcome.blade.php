@@ -159,10 +159,22 @@
     </div>
 </div>
 <div class="row mt-5 no-gutters">
-    <img src="{{ asset('images/popular-1.png') }}" class="col-sm-3">
-    <img src="{{ asset('images/popular-2.png') }}" class="col-sm-3">
-    <img src="{{ asset('images/popular-3.png') }}" class="col-sm-3">
-    <img src="{{ asset('images/popular-4.png') }}" class="col-sm-3">
+    <div class="col-sm-3 popular-image">
+        <span>Curug Cikaso</span>
+        <img src="{{ asset('images/popular-1.png') }}">
+    </div>
+    <div class="col-sm-3 popular-image">
+        <span>Penginapan Ciletuh</span>
+        <img src="{{ asset('images/popular-2.png') }}">
+    </div>
+    <div class="col-sm-3 popular-image">
+        <span>Puncak Dharma</span>
+        <img src="{{ asset('images/popular-3.png') }}">
+    </div>
+    <div class="col-sm-3 popular-image">
+        <span>Curug Awang</span>
+        <img src="{{ asset('images/popular-4.png') }}">
+    </div>
 </div>
 <div class="divider"></div>
 <div class="container">
