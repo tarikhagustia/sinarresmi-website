@@ -35,10 +35,10 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $event->title }}</h5>
                             @if (LaravelLocalization::getCurrentLocale() == 'en')
-                                <p class="card-subtitle text-muted">{{ Str::limit($event->content_en, 100, '...') }}
+                                <p class="card-subtitle text-muted">{{ Str::limit(strip_tags($event->content_en), 100, '...') }}
                                 </p>
                             @else
-                                <p class="card-subtitle text-muted">{{ Str::limit($event->content_en, 100, '...') }}</p>
+                                <p class="card-subtitle text-muted">{{ Str::limit(strip_tags($event->content_en), 100, '...') }}</p>
                             @endif
 
 
