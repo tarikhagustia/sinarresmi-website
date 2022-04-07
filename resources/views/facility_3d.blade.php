@@ -7,7 +7,12 @@
             <div class="row">
                 <div class="col-sm-6 border p-4">
                     <h1 class="text-white font-weight-bold">{{ $facility->title }}</h1>
+                    @if (LaravelLocalization::getCurrentLocale() == "en")
                     <p class="caps text-white">{{ $facility->short_desc }}</p> 
+                    @else
+                    <p class="caps text-white">{{ $facility->short_desc_id }}</p> 
+                    @endif
+                    
                 </div>
             </div>
         </div>
@@ -22,7 +27,7 @@
                 @if (LaravelLocalization::getCurrentLocale() == "en")
                     <p class="text-justify">{{ $facility->long_desc }}</p> 
                 @else
-                <p class="text-justify">{{ $facility->long_desc_id }}</p> 
+                    <p class="text-justify">{{ $facility->long_desc_id }}</p> 
                 @endif
             </div>
         </div>
