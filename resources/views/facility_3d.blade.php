@@ -19,7 +19,11 @@
 
         <div class="row mt-5">
             <div class="col-12">
-                <p class="text-justify">{{ $facility->long_desc }}</p> 
+                @if (LaravelLocalization::getCurrentLocale() == "en")
+                    <p class="text-justify">{{ $facility->long_desc }}</p> 
+                @else
+                <p class="text-justify">{{ $facility->long_desc_id }}</p> 
+                @endif
             </div>
         </div>
 
