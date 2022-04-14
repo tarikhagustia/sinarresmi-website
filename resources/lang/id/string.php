@@ -28,8 +28,8 @@ return [
 
     // Homepage
     "Welcome to Kasepuhan Sinar Resmi"=>"Selamat datang di Kasepuhan Sinar Resmi",
-    "Discover cultural diversity in this place"=>"Temukan keragaman budaya di tempat ini",
-    "A landscape is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area"=>"Lanskap adalah hasil suksesi, dari waktu ke waktu, dari proses evolusi lingkungan, sosial, budaya, dan ekonomi produktif yang terjadi di suatu daerah.",
+    "Discover cultural diversity in Our Community"=>"Temukan keragaman budaya ditempat kami",
+    "Religion, Nation, Tradition is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area"=>"Agama, Bangsa, Tradisi adalah hasil suksesi, dari waktu ke waktu, dari proses evolusi produktif lingkungan, sosial, budaya, dan ekonomi yang terjadi di suatu daerah.",
 
     "Cultural Acculturation"=>"Akulturasi Budaya",
     "Cultural Acculturation 1"=>"Kasepuhan Adat Banten Kidul adalah masyarakat adat Sunda yang tinggal di sekitar Gunung Halimun, tepatnya di Desa Sirnaresmi, Kecamatan Cisolok, Kabupaten Sukabumi, Provinsi Jawa Barat. Masyarakat Adat Kasepuhan Banten Kidul meyakini bahwa mereka adalah keturunan dari Kerajaan Sunda yang telah ada sejak 500 tahun yang lalu di Pakuan Pajajaran, yaitu pada abad ke-16 Masehi. Berdasarkan kepercayaan tersebut dapat dipahami bahwa kehidupan masyarakat Adat Kasepuhan Banten Kidul hingga saat ini berlandaskan pada budaya nenek moyang Sunda Wiwitan.",

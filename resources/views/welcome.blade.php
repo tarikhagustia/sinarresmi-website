@@ -35,8 +35,8 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
             <div class="col-md-7 ftco-animate fadeInUp ftco-animated hero">
                 <span class="subheading">{{__('string.Welcome to Kasepuhan Sinar Resmi')}}</span>
-                <h1 class="mb-4">{{__('string.Discover cultural diversity in this place')}}</h1>
-                <p class="caps">{{__('string.A landscape is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area')}}</p>
+                <h1 class="mb-4">{{__('string.Discover cultural diversity in Our Community')}}</h1>
+                <p class="caps">{{__('string.Religion, Nation, Tradition is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area')}}</p>
             </div>
 {{--            <a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">--}}
 {{--                <span class="fa fa-play"></span>--}}

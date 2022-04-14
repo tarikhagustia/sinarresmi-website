@@ -28,8 +28,8 @@ return [
 
     // Homepage
     "Welcome to Kasepuhan Sinar Resmi"=>"Welcome to Kasepuhan Sinar Resmi",
-    "Discover cultural diversity in this place"=>"Discover cultural diversity in this place",
-    "A landscape is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area"=>"A landscape is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area",
+    "Discover cultural diversity in Our Community"=>"Discover cultural diversity in Our Community",
+    "Religion, Nation, Tradition is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area"=>"Religion, Nation, Tradition is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area",
 
     "Cultural Acculturation"=>"Cultural Acculturation",
     "Cultural Acculturation 1"=>"Kasepuhan Adat Banten Kidul is a Sundanese indigenous people who live around Mount Halimun, precisely in Sirnaresmi Village, Cisolok District, Sukabumi Regency, West Java Province. The Kasepuhan Indigenous people of Banten Kidul believe that they are descended from the Sunda Kingdom which has existed since 500 years ago in Pakuan Pajajaran, namely in the 16th century AD. Based on this belief, it can be understood that the life of the Kasepuhan Indigenous people of Banten Kidul until now is based on the culture of the Sunda Wiwitan ancestors.",
