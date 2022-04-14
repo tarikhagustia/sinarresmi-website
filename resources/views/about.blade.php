@@ -43,6 +43,7 @@
             </div>
             <div class="col-sm-6">
                 <img class="img-fluid" src="{{ asset('images/culture.jpeg') }}">
+                <p class="mt-2">Upacara Ampih Pare Ka Leuit ( Ngadiukeun )</p>
             </div>
 
            

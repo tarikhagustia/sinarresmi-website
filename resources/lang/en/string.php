@@ -24,6 +24,7 @@ return [
     "Campaign"=>"Campaign",
     "Contact Us"=>"Contact Us",
     "This website contains information on Kasepuhan Sinar Resmi such as cultural, social, and geological diversity"=>"This website contains information on Kasepuhan Sinar Resmi such as cultural, social, and geological diversity",
+    "Desa Sirnaresmi, Cisolok, Kabupaten Sukabumi, Jawa Barat 43366"=>"Sirnaresmi Village, Cisolok, Sukabumi Regency, West Java 43366",
 
     // Homepage
     "Welcome to Kasepuhan Sinar Resmi"=>"Welcome to Kasepuhan Sinar Resmi",
@@ -31,7 +32,7 @@ return [
     "A landscape is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area"=>"A landscape is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area",
 
     "Cultural Acculturation"=>"Cultural Acculturation",
-    "Cultural Acculturation 1"=>"Kasepuhan Adat Banten Kidul is a Sundanese indigenous people who live around Mount Halimun, precisely in Sinarresmi Village, Cisolok District, Sukabumi Regency, West Java Province. The Kasepuhan Indigenous people of Banten Kidul believe that they are descended from the Sunda Kingdom which has existed since 500 years ago in Pakuan Pajajaran, namely in the 16th century AD. Based on this belief, it can be understood that the life of the Kasepuhan Indigenous people of Banten Kidul until now is based on the culture of the Sunda Wiwitan ancestors.",
+    "Cultural Acculturation 1"=>"Kasepuhan Adat Banten Kidul is a Sundanese indigenous people who live around Mount Halimun, precisely in Sirnaresmi Village, Cisolok District, Sukabumi Regency, West Java Province. The Kasepuhan Indigenous people of Banten Kidul believe that they are descended from the Sunda Kingdom which has existed since 500 years ago in Pakuan Pajajaran, namely in the 16th century AD. Based on this belief, it can be understood that the life of the Kasepuhan Indigenous people of Banten Kidul until now is based on the culture of the Sunda Wiwitan ancestors.",
     "Cultural Acculturation 2"=>"The Kasepuhan Sinar Resmi community still carries out the traditions of their ancestors in the agricultural sector. In this traditional village, from the process of planting rice to harvesting it is always accompanied by ceremonies related to agriculture. The most famous ceremony is the Seren Taun which is held to celebrate the rice harvest—and is usually crowded with tourists.",
 
     "Find beautiful place around Kasepuhan Sinar Resmi"=>"Find beautiful place around Kasepuhan Sinar Resmi",
@@ -55,7 +56,7 @@ return [
     
     "History of Kasepuhan Sinar Resmi"=>"History of Kasepuhan Sinar Resmi",
     "History of Kasepuhan Sinar Resmi 1"=>"Kasepuhan Adat Banten Kidul is a Sundanese indigenous people who live around Mount Halimun, precisely in Sinarresmi Village, Cisolok District, Sukabumi Regency, West Java Province. The Kasepuhan Indigenous Banten Kidul people believe that they are descended from the Sunda Kingdom which has existed since 500 years ago in Pakuan Pajajaran, namely in the 16th century. Sunda Wiwitan ancestor.",
-    "History of Kasepuhan Sinar Resmi 2"=>"However, along with the entry of Islam in the Kasepuhan Sinar Resmi environment, people's lives harmonize Islamic religious values with the values of Sunda Wiwitan culture in the daily life of the Kasepuhan Indigenous people of Banten Kidul. The existence of harmony between the two values shows the existence of acculturation in people's lives. The acculturation of these cultural values is found in three Kasepuhan who are included in the Kasepuhan Adat Banten Kidul namely Kasepuhan Sinar Resmi, Kasepuhan Cipta Mulya, and Kasepuhan Cipta Degree.",
+    "History of Kasepuhan Sinar Resmi 2"=>"However, along with the entry of Islam in the Kasepuhan Sinar Resmi environment, people's lives harmonize Islam Religion values with the values of Sunda Wiwitan culture in the daily life of the Kasepuhan Indigenous people of Banten Kidul. The existence of harmony between the two values shows the existence of acculturation in people's lives. The acculturation of these cultural values is found in three Kasepuhan who are included in the Kasepuhan Adat Banten Kidul namely Kasepuhan Sinar Resmi, Kasepuhan Cipta Mulya, and Kasepuhan Cipta Degree.",
 
     "Culture"=>"Culture",
     "Culture 1"=>"Kasepuhan Sinar Resmi is a traditional settlement that still maintains and carries out the values ​​that exist in the Sunda Wiwitan culture. One of the ritual activities carried out by the Kasepuhan Sinar Resmi community is the Seren Taun activity. This activity is a ritual activity that is carried out once a year as a form of expressing gratitude to God Almighty for the abundant harvest. Based on this ritual activity, it shows that the Kasepuhan Sinar Resmi community is an agrarian society.",

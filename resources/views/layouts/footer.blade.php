@@ -6,7 +6,11 @@
         <div class="row">
             <div class="col-sm-4">
                 <p class="font-weight-bold m-0 mb-2">{{__('string.About')}}</p>
-                <p class="text-muted">{{__('string.This website contains information on Kasepuhan Sinar Resmi such as cultural, social, and geological diversity')}}</p>
+                <ul class="text-muted list-group list-group-flush">
+                    <li class="text-muted">
+                        {{__('string.This website contains information on Kasepuhan Sinar Resmi such as cultural, social, and geological diversity')}}
+                    </li>
+                </ul>
             </div>
 
             <div class="col-sm-4">
@@ -46,13 +50,13 @@
             </div> -->
 
             <div class="col-sm-4">
-                <p class="font-weight-bold m-0 mb-2">Have a Question?</p>
+                <p class="font-weight-bold m-0 mb-2">{{__('string.Have a Question?')}}</p>
                 <ul class="text-muted list-group list-group-flush">
                     <li class="text-muted">
-                        Sinarresmi, Cisolok, Sukabumi Regency, Jawa Barat 43366
+                        {{__('string.Desa Sirnaresmi, Cisolok, Kabupaten Sukabumi, Jawa Barat 43366')}}
                     </li>
                     <li class="text-muted">
-                        0266 0212233
+                        0812 1378 6638 ( A Zago )
                     </li>
                     <li class="text-muted">
                         info@sinarresmi.com

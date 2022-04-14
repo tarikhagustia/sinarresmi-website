@@ -24,6 +24,7 @@ return [
     "Campaign"=>"Kampanye",
     "Contact Us"=>"Hubungi kami",
     "This website contains information on Kasepuhan Sinar Resmi such as cultural, social, and geological diversity"=>"Website ini memuat informasi yang ada di Kasepuhan Sinar Resmi seperti keberagaman budaya, sosial, dan geologi",
+    "Desa Sirnaresmi, Cisolok, Kabupaten Sukabumi, Jawa Barat 43366"=>"Desa Sirnaresmi, Cisolok, Kabupaten Sukabumi, Jawa Barat 43366",
 
     // Homepage
     "Welcome to Kasepuhan Sinar Resmi"=>"Selamat datang di Kasepuhan Sinar Resmi",
@@ -31,7 +32,7 @@ return [
     "A landscape is the result of the succession, over time, of the environmental, social, cultural, and economicproductive evolutionary processes that occur in an area"=>"Lanskap adalah hasil suksesi, dari waktu ke waktu, dari proses evolusi lingkungan, sosial, budaya, dan ekonomi produktif yang terjadi di suatu daerah.",
 
     "Cultural Acculturation"=>"Akulturasi Budaya",
-    "Cultural Acculturation 1"=>"Kasepuhan Adat Banten Kidul adalah masyarakat adat Sunda yang tinggal di sekitar Gunung Halimun, tepatnya di Desa Sinarresmi, Kecamatan Cisolok, Kabupaten Sukabumi, Provinsi Jawa Barat. Masyarakat Adat Kasepuhan Banten Kidul meyakini bahwa mereka adalah keturunan dari Kerajaan Sunda yang telah ada sejak 500 tahun yang lalu di Pakuan Pajajaran, yaitu pada abad ke-16 Masehi. Berdasarkan kepercayaan tersebut dapat dipahami bahwa kehidupan masyarakat Adat Kasepuhan Banten Kidul hingga saat ini berlandaskan pada budaya nenek moyang Sunda Wiwitan.",
+    "Cultural Acculturation 1"=>"Kasepuhan Adat Banten Kidul adalah masyarakat adat Sunda yang tinggal di sekitar Gunung Halimun, tepatnya di Desa Sirnaresmi, Kecamatan Cisolok, Kabupaten Sukabumi, Provinsi Jawa Barat. Masyarakat Adat Kasepuhan Banten Kidul meyakini bahwa mereka adalah keturunan dari Kerajaan Sunda yang telah ada sejak 500 tahun yang lalu di Pakuan Pajajaran, yaitu pada abad ke-16 Masehi. Berdasarkan kepercayaan tersebut dapat dipahami bahwa kehidupan masyarakat Adat Kasepuhan Banten Kidul hingga saat ini berlandaskan pada budaya nenek moyang Sunda Wiwitan.",
     "Cultural Acculturation 2"=>"Masyarakat Kasepuhan Sinar masih menjalankan tradisi nenek moyang di bidang pertanian. Di desa adat ini, mulai dari proses menanam padi hingga panen selalu disertai dengan upacara-upacara yang berkaitan dengan pertanian. Upacara yang paling terkenal adalah Seren Taun yang diadakan untuk merayakan panen padi—dan biasanya ramai dikunjungi wisatawan.",
 
     "Find beautiful place around Kasepuhan Sinar Resmi"=>"Temukan tempat indah di sekitar Kasepuhan Sinar Resmi",

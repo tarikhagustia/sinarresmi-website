@@ -15,6 +15,11 @@
     </div>
     <div class="divider"></div>
     <div class="container">
+        <div class="row mb-5">
+            <div class="col">
+                <img src="{{asset('images/hero-facility.jpeg')}}" alt="Facility" width="100%">
+            </div>
+        </div>
         @foreach ($facilities as $f)
             <div class="row align-items-center mb-5 {{ !$loop->odd ? 'flex-row-reverse' : null }}">
                 <div class="col-sm-7 p-5">
