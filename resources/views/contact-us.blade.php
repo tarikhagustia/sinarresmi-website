@@ -38,6 +38,7 @@
                                 <textarea name="question" class="form-control"></textarea>
                             </div>
                             <button type="submit" class="btn btn-success btn-block">{{__("string.Submit")}}</button>
+                            <a href="https://wa.me/081213786638" class="btn btn-outline-success btn-block">{{__("string.Hubungi Via WhatsApp")}}</a>
                         </div>
 
                     </div>

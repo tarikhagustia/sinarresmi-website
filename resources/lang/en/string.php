@@ -50,6 +50,9 @@ return [
     "Purpose"=>"Purpose",
     "Booking Now"=>"Booking Now",
 
+    "Sara Nagara Mokaha"=>"Sara Nagara Mokaha",
+    "Agama, Negara, Adat Tradisi"=>"Religion, Country, Traditions",
+
     // About Us
     "About Us"=>"About Us",
     "Kasepuhan Sinar Resmi led by Traditional Leader is located in Cisolok District, and is a diversity of one of the traditional villages of Kasepuhan Banten Kidul which is still preserved. Kasepuhan Sinar Resmi is an integral part of the cultural aspect of the Ciletuh Geopark."=>"Kasepuhan Sinar Resmi led by Traditional Leader is located in Cisolok District, and is a diversity of one of the traditional villages of Kasepuhan Banten Kidul which is still preserved. Kasepuhan Sinar Resmi is an integral part of the cultural aspect of the Ciletuh Geopark.",
@@ -92,6 +95,7 @@ return [
     "Your Email"=>"Your Email",
     "Your Question"=>"Your Question",
     "Submit"=>"Submit",
+    "Hubungi Via WhatsApp"=>"Contact Via WhatsApp",
 
     // Gallery
     "Gallery"=>"Gallery",

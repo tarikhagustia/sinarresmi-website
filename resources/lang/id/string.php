@@ -50,6 +50,9 @@ return [
     "Purpose"=>"Tujuan",
     "Booking Now"=>"Pesan Sekarang",
     
+    "Sara Nagara Mokaha"=>"Sara Nagara Mokaha",
+    "Agama, Negara, Adat Tradisi"=>"Agama, Negara, Adat Tradisi",
+    
     // About Us
     "About Us"=>"Tentang Kami",
     "Kasepuhan Sinar Resmi led by Traditional Leader is located in Cisolok District, and is a diversity of one of the traditional villages of Kasepuhan Banten Kidul which is still preserved. Kasepuhan Sinar Resmi is an integral part of the cultural aspect of the Ciletuh Geopark."=>"Kasepuhan Sinar Resmi yang dipimpin oleh Ketua Adat ini terletak di Kecamatan Cisolok, dan merupakan salah satu keragaman salah satu desa adat Kasepuhan Banten Kidul yang masih dilestarikan. Kasepuhan Sinar Resmi merupakan bagian integral dari aspek budaya Geopark Ciletuh.",
@@ -92,6 +95,7 @@ return [
     "Your Email"=>"Email anda",
     "Your Question"=>"Pertanyaan anda",
     "Submit"=>"Kirim",
+    "Hubungi Via WhatsApp"=>"Hubungi Via WhatsApp",
     
     // Gallery
     "Gallery"=>"Galeri",
